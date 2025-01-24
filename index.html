@@ -79,14 +79,30 @@
         .card-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             margin-bottom: 12px;
-            gap: 8px;
         }
 
         .card-header h2 {
             font-size: 16px;
             margin: 0;
             color: #ffffff;
+        }
+
+        .copy-all-button {
+            background-color: #bb86fc;
+            color: #1e1e1e;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-all-button:hover {
+            background-color: #9965f4;
         }
 
         .help-text {
@@ -127,15 +143,13 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            border: none;
+            color: #1e1e1e;
+            font-size: 16px;
         }
 
         .copy-button:hover {
             background-color: #9965f4;
-        }
-
-        .copy-button i {
-            color: #1e1e1e;
-            font-size: 16px;
         }
 
         .footer {
@@ -216,6 +230,9 @@
                 card.innerHTML = `
                     <div class="card-header">
                         <h2>${country}</h2>
+                        <button class="copy-all-button" onclick="copyAllConfigs('${country}')">
+                            Copy All
+                        </button>
                     </div>
                 `;
 
@@ -224,15 +241,27 @@
                     configDiv.className = 'output-flex';
                     configDiv.innerHTML = `
                         <input type="text" value="${config.input_value}" readonly>
-                        <div class="copy-button" onclick="copyToClipboard('${config.input_value}')">
-                            <i class="fas fa-copy" style="display: none;"></i>
-                        </div>
+                        <button class="copy-button" onclick="copyToClipboard('${config.input_value}')">✂️</button>
                     `;
                     card.appendChild(configDiv);
                 });
 
                 configsContainer.appendChild(card);
             }
+        }
+
+        // Function to copy all configs for a specific country
+        function copyAllConfigs(country) {
+            const configs = apiData
+                .filter(config => config.country_text === country)
+                .map(config => config.input_value)
+                .join('\n');
+
+            navigator.clipboard.writeText(configs).then(() => {
+                alert(`All configurations for ${country} copied to clipboard!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
         }
 
         // Function to copy config to clipboard
@@ -245,9 +274,11 @@
         }
 
         // Fetch data from api.json
+        let apiData = [];
         fetch('api')
             .then(response => response.json())
             .then(data => {
+                apiData = data;
                 displayConfigs(data);
             })
             .catch(error => {
@@ -256,6 +287,5 @@
                 configsContainer.innerHTML = `<p style="color: #ff6b6b;">Failed to load configurations. Please try again later.</p>`;
             });
     </script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
