@@ -229,7 +229,8 @@
             try {
                 const response = await fetch('country.lock');
                 const data = await response.json();
-                const code = data[country]?.toLowerCase(); // Convert to lowercase for flag-icons
+                const code = data[country]?.toLowerCase(); // Convert to lowercase
+                console.log(`Country: ${country}, Code: ${code}`); // Debugging
                 return code || "globe"; // Default to globe icon if flag not found
             } catch (error) {
                 console.error('Error fetching country codes:', error);
