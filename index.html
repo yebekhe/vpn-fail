@@ -224,10 +224,10 @@
             });
         }
 
-        // Function to get flag code from country name using country.lock
+        // Function to get flag code from country name using countries.lock
         async function getFlagCode(country) {
             try {
-                const response = await fetch('country.lock');
+                const response = await fetch('countries.lock');
                 const data = await response.json();
                 const code = data[country]?.toLowerCase(); // Convert to lowercase
                 console.log(`Country: ${country}, Code: ${code}`); // Debugging
@@ -309,7 +309,7 @@
             });
         }
 
-        // Fetch data from api and country.lock
+        // Fetch data from api and countries.lock
         let apiData = [];
         Promise.all([
             fetch('api').then(response => response.json()),
