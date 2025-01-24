@@ -20,7 +20,7 @@ function openLink($url) {
   
 function getCountryCode($countryName) {
     // Associative array mapping country names to their ISO 3166-1 alpha-2 codes
-    $countryCodes = json_decode(file_get_contents("https://itshin.serv00.net/api/free-config/countries.lock"), true);
+    $countryCodes = json_decode(file_get_contents("https://yebekhe.site/api/free-config/countries.lock"), true);
 
     // Convert the input to title case to handle case insensitivity
     $countryName = ucwords(strtolower($countryName));
@@ -158,6 +158,8 @@ function fetchInputValue($url, &$countryFromPre) {
 $html = openLink("https://vpn.fail/free-proxy/type/v2ray");
 
 $results = extractArticleData($html);
+
+file_put_contents("api", $results);
   
 foreach ($results as $config) {
     $output .= $config['input_value'] . "\n";  
