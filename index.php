@@ -20,7 +20,7 @@ function openLink($url) {
   
 function getCountryCode($countryName) {
     // Associative array mapping country names to their ISO 3166-1 alpha-2 codes
-    $countryCodes = json_decode(file_get_contents("https://yebekhe.site/api/free-config/countries.lock"), true);
+    $countryCodes = json_decode(file_get_contents("countries.lock"), true);
 
     // Convert the input to title case to handle case insensitivity
     $countryName = ucwords(strtolower($countryName));
