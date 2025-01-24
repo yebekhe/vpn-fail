@@ -159,7 +159,7 @@ $html = openLink("https://vpn.fail/free-proxy/type/v2ray");
 
 $results = extractArticleData($html);
 
-file_put_contents("api", $results);
+file_put_contents("api", json_encode($results, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE));
   
 foreach ($results as $config) {
     $output .= $config['input_value'] . "\n";  
