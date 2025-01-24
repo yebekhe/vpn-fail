@@ -107,8 +107,9 @@
         }
 
         .copy-all-button {
-            display: flex;
+            display: inline-flex;
             align-items: center;
+            gap: 0; /* No gap between icon and text */
             background-color: #bb86fc;
             color: #1e1e1e;
             padding: 8px 12px;
@@ -118,7 +119,14 @@
             font-weight: 500;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: auto; /* Reduced width */
+            width: auto;
+            line-height: 1; /* Reset line height */
+        }
+
+        .copy-all-button .material-icons {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-size: 18px; /* Ensure consistent size */
         }
 
         .copy-all-button:hover {
