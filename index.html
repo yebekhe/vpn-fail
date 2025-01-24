@@ -46,63 +46,6 @@
             margin: 8px 0 0;
         }
 
-        .card {
-            background-color: #252525;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-            gap: 8px;
-        }
-
-        .card-header i {
-            color: #bb86fc;
-            font-size: 20px;
-        }
-
-        .card-header h2 {
-            font-size: 16px;
-            margin: 0;
-            color: #ffffff;
-        }
-
-        .help-text {
-            font-size: 13px;
-            color: #b0b0b0;
-            margin: 4px 0 8px 0;
-            line-height: 1.4;
-        }
-
-        textarea, input[type="text"] {
-            width: calc(100% - 24px);
-            padding: 12px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            background-color: #2c2c2c;
-            color: #e0e0e0;
-            transition: border-color 0.3s ease;
-            margin-top: 8px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            min-height: 100px;
-            max-height: 200px;
-            resize: vertical;
-        }
-
-        textarea:focus, input[type="text"]:focus {
-            border-color: #bb86fc;
-            outline: none;
-        }
-
         .button {
             display: flex;
             align-items: center;
@@ -126,6 +69,52 @@
             transform: translateY(-1px);
         }
 
+        .card {
+            background-color: #252525;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 8px;
+        }
+
+        .card-header h2 {
+            font-size: 16px;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .help-text {
+            font-size: 13px;
+            color: #b0b0b0;
+            margin: 4px 0 8px 0;
+            line-height: 1.4;
+        }
+
+        .output-flex {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .output-flex input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
         .copy-button {
             padding: 8px;
             margin-bottom: 0;
@@ -147,17 +136,6 @@
         .copy-button i {
             color: #1e1e1e;
             font-size: 16px;
-        }
-
-        .output-flex {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .output-flex input[type="text"] {
-            flex: 1;
-            margin: 0;
         }
 
         .footer {
@@ -197,31 +175,64 @@
         <div class="header">
             <h1>VPN Configurations</h1>
             <p>Browse and copy VPN configurations easily.</p>
+            <button class="button" onclick="copySubscriptionLink()">
+                Copy Full Subscription Link
+            </button>
         </div>
         <div id="configs"></div>
     </div>
 
     <script>
+        // Subscription link
+        const subscriptionLink = "https://raw.githubusercontent.com/yebekhe/vpn-fail/main/sub-link";
+
+        // Function to copy subscription link
+        function copySubscriptionLink() {
+            navigator.clipboard.writeText(subscriptionLink).then(() => {
+                alert('Subscription link copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
         // Function to display configurations
         function displayConfigs(data) {
             const configsContainer = document.getElementById('configs');
-            data.forEach(config => {
+
+            // Group configurations by country
+            const groupedConfigs = data.reduce((acc, config) => {
+                const country = config.country_text;
+                if (!acc[country]) {
+                    acc[country] = [];
+                }
+                acc[country].push(config);
+                return acc;
+            }, {});
+
+            // Render grouped configurations
+            for (const [country, configs] of Object.entries(groupedConfigs)) {
                 const card = document.createElement('div');
                 card.className = 'card fade-in';
                 card.innerHTML = `
                     <div class="card-header">
-                        <h2>${config.country_text}</h2>
-                    </div>
-                    <div class="help-text">Click the button to copy the configuration.</div>
-                    <div class="output-flex">
-                        <input type="text" value="${config.input_value}" readonly>
-                        <div class="copy-button" onclick="copyToClipboard('${config.input_value}')">
-                            <i class="fas fa-copy"></i>
-                        </div>
+                        <h2>${country}</h2>
                     </div>
                 `;
+
+                configs.forEach(config => {
+                    const configDiv = document.createElement('div');
+                    configDiv.className = 'output-flex';
+                    configDiv.innerHTML = `
+                        <input type="text" value="${config.input_value}" readonly>
+                        <div class="copy-button" onclick="copyToClipboard('${config.input_value}')">
+                            <i class="fas fa-copy" style="display: none;"></i>
+                        </div>
+                    `;
+                    card.appendChild(configDiv);
+                });
+
                 configsContainer.appendChild(card);
-            });
+            }
         }
 
         // Function to copy config to clipboard
@@ -234,7 +245,7 @@
         }
 
         // Fetch data from api.json
-        fetch('api')
+        fetch('api.json')
             .then(response => response.json())
             .then(data => {
                 displayConfigs(data);
