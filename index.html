@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPN Configurations</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -90,6 +91,9 @@
         }
 
         .copy-all-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             background-color: #bb86fc;
             color: #1e1e1e;
             padding: 8px 12px;
@@ -145,7 +149,6 @@
             transition: background-color 0.3s ease;
             border: none;
             color: #1e1e1e;
-            font-size: 16px;
         }
 
         .copy-button:hover {
@@ -190,6 +193,7 @@
             <h1>VPN Configurations</h1>
             <p>Browse and copy VPN configurations easily.</p>
             <button class="button" onclick="copySubscriptionLink()">
+                <span class="material-icons">content_copy</span>
                 Copy Full Subscription Link
             </button>
         </div>
@@ -231,6 +235,7 @@
                     <div class="card-header">
                         <h2>${country}</h2>
                         <button class="copy-all-button" onclick="copyAllConfigs('${country}')">
+                            <span class="material-icons">content_copy_all</span>
                             Copy All
                         </button>
                     </div>
@@ -241,7 +246,9 @@
                     configDiv.className = 'output-flex';
                     configDiv.innerHTML = `
                         <input type="text" value="${config.input_value}" readonly>
-                        <button class="copy-button" onclick="copyToClipboard('${config.input_value}')">✂️</button>
+                        <button class="copy-button" onclick="copyToClipboard('${config.input_value}')">
+                            <span class="material-icons">content_copy</span>
+                        </button>
                     `;
                     card.appendChild(configDiv);
                 });
@@ -273,7 +280,7 @@
             });
         }
 
-        // Fetch data from api.json
+        // Fetch data from api
         let apiData = [];
         fetch('api')
             .then(response => response.json())
