@@ -79,6 +79,12 @@
             .input-field {
                 @apply w-full bg-dark-secondary border border-dark-border rounded-lg px-4 py-3 text-dark-text placeholder-dark-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors;
             }
+            .tab {
+                @apply px-4 py-2 rounded-lg transition-colors bg-dark-secondary text-dark-muted hover:text-dark-text;
+            }
+            .tab-active {
+                @apply bg-accent text-dark-bg;
+            }
         }
     </style>
 </head>
@@ -118,6 +124,29 @@
             </div>
         </div>
 
+        <!-- Category Selector -->
+        <div id="categorySection" class="card mb-6 hidden animate-fade-in">
+            <h3 class="text-lg font-semibold mb-3">View Configurations By:</h3>
+            <div class="flex flex-wrap gap-2">
+                <button id="categoryAll" class="tab tab-active" data-category="all">
+                    <span class="material-icons text-lg">view_list</span>
+                    All Configs
+                </button>
+                <button id="categoryType" class="tab" data-category="type">
+                    <span class="material-icons text-lg">category</span>
+                    By Type
+                </button>
+                <button id="categoryCountry" class="tab" data-category="country">
+                    <span class="material-icons text-lg">public</span>
+                    By Country
+                </button>
+                <button id="categoryTypeCountry" class="tab" data-category="type-country">
+                    <span class="material-icons text-lg">filter_list</span>
+                    By Type & Country
+                </button>
+            </div>
+        </div>
+
         <!-- Filter Section -->
         <div id="filterSection" class="card mb-6 hidden animate-fade-in">
             <div class="flex flex-col md:flex-row gap-4">
@@ -141,6 +170,9 @@
             </div>
         </div>
 
+        <!-- Secondary Tabs (for countries or types) -->
+        <div id="secondaryTabs" class="flex flex-wrap gap-2 mb-6 overflow-x-auto pb-2 hidden"></div>
+
         <!-- Loading State -->
         <div id="loadingState" class="flex flex-col items-center justify-center py-16">
             <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent mb-4"></div>
@@ -160,9 +192,6 @@
 
         <!-- Configurations Container -->
         <div id="configsContainer" class="hidden">
-            <!-- Country tabs will be inserted here -->
-            <div id="countryTabs" class="flex flex-wrap gap-2 mb-6 overflow-x-auto pb-2"></div>
-            
             <!-- Config cards will be inserted here -->
             <div id="configsList"></div>
         </div>
@@ -202,8 +231,9 @@
         const errorState = document.getElementById('errorState');
         const configsContainer = document.getElementById('configsContainer');
         const statsSection = document.getElementById('statsSection');
+        const categorySection = document.getElementById('categorySection');
         const filterSection = document.getElementById('filterSection');
-        const countryTabs = document.getElementById('countryTabs');
+        const secondaryTabs = document.getElementById('secondaryTabs');
         const configsList = document.getElementById('configsList');
         const searchInput = document.getElementById('searchInput');
         const typeFilter = document.getElementById('typeFilter');
@@ -216,8 +246,12 @@
         // State
         let apiData = [];
         let countryCodes = {};
+        let currentCategory = 'all';
+        let activeType = null;
         let activeCountry = 'all';
         let groupedConfigs = {};
+        let groupedByType = {};
+        let groupedByTypeCountry = {};
         
         // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
@@ -238,10 +272,14 @@
                 loadingState.classList.add('hidden');
                 configsContainer.classList.remove('hidden');
                 statsSection.classList.remove('hidden');
+                categorySection.classList.remove('hidden');
                 filterSection.classList.remove('hidden');
                 
                 // Setup event listeners
                 setupEventListeners();
+                
+                // Display initial category
+                switchCategory('all');
                 
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -262,65 +300,47 @@
                 return acc;
             }, {});
             
+            // Group configurations by type
+            groupedByType = data.reduce((acc, config) => {
+                const type = config.enriched_data?.type || 'unknown';
+                if (!acc[type]) {
+                    acc[type] = [];
+                }
+                acc[type].push(config);
+                return acc;
+            }, {});
+            
+            // Group configurations by type and country
+            groupedByTypeCountry = data.reduce((acc, config) => {
+                const type = config.enriched_data?.type || 'unknown';
+                const country = config.country_text || 'Unknown';
+                
+                if (!acc[type]) {
+                    acc[type] = {};
+                }
+                if (!acc[type][country]) {
+                    acc[type][country] = [];
+                }
+                acc[type][country].push(config);
+                return acc;
+            }, {});
+            
             // Update stats
             totalConfigsEl.textContent = data.length;
             totalCountriesEl.textContent = Object.keys(groupedConfigs).length;
             lastUpdatedEl.textContent = new Date().toLocaleDateString();
-            
-            // Create country tabs
-            createCountryTabs(Object.keys(groupedConfigs));
-            
-            // Display all configurations
-            displayConfigs('all', groupedConfigs);
-        }
-        
-        // Create country tabs
-        function createCountryTabs(countries) {
-            countryTabs.innerHTML = '';
-            
-            // All tab
-            const allTab = createTab('all', 'All Countries', true);
-            countryTabs.appendChild(allTab);
-            
-            // Country tabs
-            countries.forEach(country => {
-                const flagCode = getFlagCode(country);
-                const tab = createTab(country, `${getCountryEmoji(flagCode)} ${country}`, false);
-                countryTabs.appendChild(tab);
-            });
-        }
-        
-        // Create a single tab
-        function createTab(id, label, isActive) {
-            const tab = document.createElement('button');
-            tab.className = `px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-accent text-dark-bg' : 'bg-dark-secondary text-dark-muted hover:text-dark-text'}`;
-            tab.textContent = label;
-            tab.onclick = () => selectCountry(id);
-            return tab;
-        }
-        
-        // Select country
-        function selectCountry(country) {
-            activeCountry = country;
-            
-            // Update tab styles
-            const tabs = countryTabs.querySelectorAll('button');
-            tabs.forEach(tab => {
-                if (tab.textContent.includes(country) || (country === 'all' && tab.textContent.includes('All'))) {
-                    tab.className = 'px-4 py-2 rounded-lg transition-colors bg-accent text-dark-bg';
-                } else {
-                    tab.className = 'px-4 py-2 rounded-lg transition-colors bg-dark-secondary text-dark-muted hover:text-dark-text';
-                }
-            });
-            
-            // Re-filter and display configs
-            filterAndDisplayConfigs();
         }
         
         // Setup event listeners
         function setupEventListeners() {
             // Copy subscription link
             document.getElementById('copySubscriptionBtn').addEventListener('click', copySubscriptionLink);
+            
+            // Category buttons
+            document.getElementById('categoryAll').addEventListener('click', () => switchCategory('all'));
+            document.getElementById('categoryType').addEventListener('click', () => switchCategory('type'));
+            document.getElementById('categoryCountry').addEventListener('click', () => switchCategory('country'));
+            document.getElementById('categoryTypeCountry').addEventListener('click', () => switchCategory('type-country'));
             
             // Search input
             searchInput.addEventListener('input', filterAndDisplayConfigs);
@@ -329,18 +349,484 @@
             typeFilter.addEventListener('change', filterAndDisplayConfigs);
         }
         
+        // Switch category
+        function switchCategory(category) {
+            currentCategory = category;
+            
+            // Update category tab styles
+            document.querySelectorAll('#categorySection .tab').forEach(tab => {
+                if (tab.dataset.category === category) {
+                    tab.classList.add('tab-active');
+                } else {
+                    tab.classList.remove('tab-active');
+                }
+            });
+            
+            // Reset filters
+            searchInput.value = '';
+            typeFilter.value = 'all';
+            activeType = null;
+            activeCountry = 'all';
+            
+            // Clear secondary tabs
+            secondaryTabs.innerHTML = '';
+            secondaryTabs.classList.add('hidden');
+            
+            // Display configs based on category
+            switch (category) {
+                case 'all':
+                    displayAllConfigs();
+                    break;
+                case 'type':
+                    displayByType();
+                    break;
+                case 'country':
+                    displayByCountry();
+                    break;
+                case 'type-country':
+                    displayByTypeCountry();
+                    break;
+            }
+        }
+        
+        // Display all configs
+        function displayAllConfigs() {
+            filterSection.classList.remove('hidden');
+            filterAndDisplayConfigs();
+        }
+        
+        // Display configs by type
+        function displayByType() {
+            filterSection.classList.remove('hidden');
+            secondaryTabs.classList.remove('hidden');
+            
+            // Create type tabs
+            secondaryTabs.innerHTML = '';
+            
+            // All types tab
+            const allTypesTab = document.createElement('button');
+            allTypesTab.className = 'tab tab-active';
+            allTypesTab.innerHTML = '<span class="material-icons text-lg">apps</span> All Types';
+            allTypesTab.onclick = () => selectType(null);
+            secondaryTabs.appendChild(allTypesTab);
+            
+            // Type tabs
+            Object.keys(groupedByType).forEach(type => {
+                const tab = document.createElement('button');
+                tab.className = 'tab';
+                tab.innerHTML = `
+                    <span class="material-icons text-lg">${getTypeIcon(type)}</span>
+                    ${type.toUpperCase()}
+                    <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs ml-1">${groupedByType[type].length}</span>
+                `;
+                tab.onclick = () => selectType(type);
+                secondaryTabs.appendChild(tab);
+            });
+            
+            // Initially show all types
+            selectType(null);
+        }
+        
+        // Display configs by country
+        function displayByCountry() {
+            filterSection.classList.remove('hidden');
+            secondaryTabs.classList.remove('hidden');
+            
+            // Create country tabs
+            secondaryTabs.innerHTML = '';
+            
+            // All countries tab
+            const allCountriesTab = document.createElement('button');
+            allCountriesTab.className = 'tab tab-active';
+            allCountriesTab.innerHTML = '<span class="material-icons text-lg">public</span> All Countries';
+            allCountriesTab.onclick = () => selectCountry(null);
+            secondaryTabs.appendChild(allCountriesTab);
+            
+            // Country tabs
+            Object.keys(groupedConfigs).forEach(country => {
+                const flagCode = getFlagCode(country);
+                const countryEmoji = getCountryEmoji(flagCode);
+                const tab = document.createElement('button');
+                tab.className = 'tab';
+                tab.innerHTML = `
+                    <span class="text-lg">${countryEmoji}</span>
+                    ${country}
+                    <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs ml-1">${groupedConfigs[country].length}</span>
+                `;
+                tab.onclick = () => selectCountry(country);
+                secondaryTabs.appendChild(tab);
+            });
+            
+            // Initially show all countries
+            selectCountry(null);
+        }
+        
+        // Display configs by type and country
+        function displayByTypeCountry() {
+            filterSection.classList.add('hidden');
+            secondaryTabs.classList.remove('hidden');
+            
+            // Create type tabs
+            secondaryTabs.innerHTML = '';
+            
+            // Type tabs
+            Object.keys(groupedByTypeCountry).forEach(type => {
+                const tab = document.createElement('button');
+                tab.className = 'tab';
+                tab.innerHTML = `
+                    <span class="material-icons text-lg">${getTypeIcon(type)}</span>
+                    ${type.toUpperCase()}
+                `;
+                tab.onclick = () => selectTypeForTypeCountry(type);
+                secondaryTabs.appendChild(tab);
+            });
+            
+            // Initially select the first type
+            if (Object.keys(groupedByTypeCountry).length > 0) {
+                selectTypeForTypeCountry(Object.keys(groupedByTypeCountry)[0]);
+            }
+        }
+        
+        // Select type for type-country view
+        function selectTypeForTypeCountry(type) {
+            activeType = type;
+            
+            // Update type tab styles
+            const typeTabs = secondaryTabs.querySelectorAll('.tab');
+            typeTabs.forEach(tab => {
+                if (tab.textContent.toLowerCase().includes(type.toLowerCase())) {
+                    tab.classList.add('tab-active');
+                } else {
+                    tab.classList.remove('tab-active');
+                }
+            });
+            
+            // Create country tabs for the selected type
+            const countriesForType = groupedByTypeCountry[type] || {};
+            
+            // Create a new container for country tabs
+            const countryTabsContainer = document.createElement('div');
+            countryTabsContainer.className = 'flex flex-wrap gap-2 mb-6 overflow-x-auto pb-2';
+            
+            // All countries tab for this type
+            const allCountriesTab = document.createElement('button');
+            allCountriesTab.className = 'tab tab-active';
+            allCountriesTab.innerHTML = '<span class="material-icons text-lg">public</span> All Countries';
+            allCountriesTab.onclick = () => selectCountryForTypeCountry(null);
+            countryTabsContainer.appendChild(allCountriesTab);
+            
+            // Country tabs for this type
+            Object.keys(countriesForType).forEach(country => {
+                const flagCode = getFlagCode(country);
+                const countryEmoji = getCountryEmoji(flagCode);
+                const tab = document.createElement('button');
+                tab.className = 'tab';
+                tab.innerHTML = `
+                    <span class="text-lg">${countryEmoji}</span>
+                    ${country}
+                    <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs ml-1">${countriesForType[country].length}</span>
+                `;
+                tab.onclick = () => selectCountryForTypeCountry(country);
+                countryTabsContainer.appendChild(tab);
+            });
+            
+            // Replace the current secondary tabs with country tabs
+            configsList.innerHTML = '';
+            configsList.appendChild(countryTabsContainer);
+            
+            // Initially show all countries for this type
+            selectCountryForTypeCountry(null);
+        }
+        
+        // Select country for type-country view
+        function selectCountryForTypeCountry(country) {
+            activeCountry = country;
+            
+            // Update country tab styles
+            const countryTabs = configsList.querySelector('.flex');
+            if (countryTabs) {
+                const tabs = countryTabs.querySelectorAll('.tab');
+                tabs.forEach(tab => {
+                    if (country === null && tab.textContent.includes('All Countries')) {
+                        tab.classList.add('tab-active');
+                    } else if (country !== null && tab.textContent.includes(country)) {
+                        tab.classList.add('tab-active');
+                    } else {
+                        tab.classList.remove('tab-active');
+                    }
+                });
+            }
+            
+            // Display configs for the selected type and country
+            displayConfigsForTypeCountry();
+        }
+        
+        // Display configs for type and country
+        function displayConfigsForTypeCountry() {
+            const configs = activeType && activeCountry
+                ? (groupedByTypeCountry[activeType]?.[activeCountry] || [])
+                : (activeType
+                    ? Object.values(groupedByTypeCountry[activeType] || {}).flat()
+                    : []);
+            
+            configsList.innerHTML = '';
+            
+            if (configs.length === 0) {
+                configsList.innerHTML = `
+                    <div class="card text-center py-10">
+                        <span class="material-icons text-5xl text-dark-muted mb-4">search_off</span>
+                        <h3 class="text-xl font-semibold mb-2">No configurations found</h3>
+                        <p class="text-dark-muted">Try selecting a different type or country.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Create a card for the type and country
+            const card = document.createElement('div');
+            card.className = 'card animate-fade-in';
+            
+            const title = activeType && activeCountry
+                ? `${activeType.toUpperCase()} in ${activeCountry}`
+                : activeType
+                    ? `All ${activeType.toUpperCase()} Configurations`
+                    : 'All Configurations';
+            
+            card.innerHTML = `
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-3">
+                        <h2 class="text-xl font-bold">${title}</h2>
+                        <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs">${configs.length} configs</span>
+                    </div>
+                    <button class="btn-sm" onclick="copyConfigsForTypeCountry()">
+                        <span class="material-icons">content_copy</span>
+                        Copy All
+                    </button>
+                </div>
+                <div class="space-y-3">
+                    ${configs.map(config => createConfigItem(config)).join('')}
+                </div>
+            `;
+            
+            configsList.appendChild(card);
+        }
+        
+        // Copy configs for type and country
+        function copyConfigsForTypeCountry() {
+            let configs = [];
+            
+            if (activeType && activeCountry) {
+                configs = groupedByTypeCountry[activeType]?.[activeCountry] || [];
+            } else if (activeType) {
+                configs = Object.values(groupedByTypeCountry[activeType] || {}).flat();
+            } else {
+                configs = apiData;
+            }
+            
+            const configTexts = configs.map(config => config.input_value).join('\n');
+            
+            navigator.clipboard.writeText(configTexts).then(() => {
+                showToast(`Copied ${configs.length} configurations!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                showToast('Failed to copy configurations', 'error');
+            });
+        }
+        
+        // Select type
+        function selectType(type) {
+            activeType = type;
+            
+            // Update type tab styles
+            const typeTabs = secondaryTabs.querySelectorAll('.tab');
+            typeTabs.forEach(tab => {
+                if (type === null && tab.textContent.includes('All Types')) {
+                    tab.classList.add('tab-active');
+                } else if (type !== null && tab.textContent.toLowerCase().includes(type.toLowerCase())) {
+                    tab.classList.add('tab-active');
+                } else {
+                    tab.classList.remove('tab-active');
+                }
+            });
+            
+            // Display configs for the selected type
+            displayConfigsForType();
+        }
+        
+        // Display configs for type
+        function displayConfigsForType() {
+            const configs = activeType ? groupedByType[activeType] || [] : apiData;
+            
+            configsList.innerHTML = '';
+            
+            if (configs.length === 0) {
+                configsList.innerHTML = `
+                    <div class="card text-center py-10">
+                        <span class="material-icons text-5xl text-dark-muted mb-4">search_off</span>
+                        <h3 class="text-xl font-semibold mb-2">No configurations found</h3>
+                        <p class="text-dark-muted">Try selecting a different type.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Create a card for the type
+            const card = document.createElement('div');
+            card.className = 'card animate-fade-in';
+            
+            const title = activeType ? `${activeType.toUpperCase()} Configurations` : 'All Configurations';
+            
+            card.innerHTML = `
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-3">
+                        <h2 class="text-xl font-bold">${title}</h2>
+                        <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs">${configs.length} configs</span>
+                    </div>
+                    <button class="btn-sm" onclick="copyConfigsForType()">
+                        <span class="material-icons">content_copy</span>
+                        Copy All
+                    </button>
+                </div>
+                <div class="space-y-3">
+                    ${configs.map(config => createConfigItem(config)).join('')}
+                </div>
+            `;
+            
+            configsList.appendChild(card);
+        }
+        
+        // Copy configs for type
+        function copyConfigsForType() {
+            const configs = activeType ? groupedByType[activeType] || [] : apiData;
+            const configTexts = configs.map(config => config.input_value).join('\n');
+            
+            navigator.clipboard.writeText(configTexts).then(() => {
+                showToast(`Copied ${configs.length} ${activeType ? activeType.toUpperCase() : ''} configurations!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                showToast('Failed to copy configurations', 'error');
+            });
+        }
+        
+        // Select country
+        function selectCountry(country) {
+            activeCountry = country;
+            
+            // Update country tab styles
+            const countryTabs = secondaryTabs.querySelectorAll('.tab');
+            countryTabs.forEach(tab => {
+                if (country === null && tab.textContent.includes('All Countries')) {
+                    tab.classList.add('tab-active');
+                } else if (country !== null && tab.textContent.includes(country)) {
+                    tab.classList.add('tab-active');
+                } else {
+                    tab.classList.remove('tab-active');
+                }
+            });
+            
+            // Display configs for the selected country
+            displayConfigsForCountry();
+        }
+        
+        // Display configs for country
+        function displayConfigsForCountry() {
+            const configs = activeCountry ? groupedConfigs[activeCountry] || [] : apiData;
+            
+            configsList.innerHTML = '';
+            
+            if (configs.length === 0) {
+                configsList.innerHTML = `
+                    <div class="card text-center py-10">
+                        <span class="material-icons text-5xl text-dark-muted mb-4">search_off</span>
+                        <h3 class="text-xl font-semibold mb-2">No configurations found</h3>
+                        <p class="text-dark-muted">Try selecting a different country.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Create a card for the country
+            const card = document.createElement('div');
+            card.className = 'card animate-fade-in';
+            
+            const title = activeCountry ? `${activeCountry} Configurations` : 'All Configurations';
+            const flagCode = activeCountry ? getFlagCode(activeCountry) : null;
+            const countryEmoji = activeCountry ? getCountryEmoji(flagCode) : '🌐';
+            
+            card.innerHTML = `
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">${countryEmoji}</span>
+                        <h2 class="text-xl font-bold">${title}</h2>
+                        <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs">${configs.length} configs</span>
+                    </div>
+                    <button class="btn-sm" onclick="copyConfigsForCountry()">
+                        <span class="material-icons">content_copy</span>
+                        Copy All
+                    </button>
+                </div>
+                <div class="space-y-3">
+                    ${configs.map(config => createConfigItem(config)).join('')}
+                </div>
+            `;
+            
+            configsList.appendChild(card);
+        }
+        
+        // Copy configs for country
+        function copyConfigsForCountry() {
+            const configs = activeCountry ? groupedConfigs[activeCountry] || [] : apiData;
+            const configTexts = configs.map(config => config.input_value).join('\n');
+            
+            navigator.clipboard.writeText(configTexts).then(() => {
+                showToast(`Copied ${configs.length} configurations for ${activeCountry || 'all countries'}!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                showToast('Failed to copy configurations', 'error');
+            });
+        }
+        
         // Filter and display configurations
         function filterAndDisplayConfigs() {
             const searchTerm = searchInput.value.toLowerCase();
             const typeValue = typeFilter.value;
             
             // Filter configs based on search and type
-            const filteredConfigs = {};
+            let filteredConfigs = [];
             
-            for (const [country, configs] of Object.entries(groupedConfigs)) {
-                const countryMatches = country.toLowerCase().includes(searchTerm);
-                
-                const filteredCountryConfigs = configs.filter(config => {
+            if (currentCategory === 'all') {
+                // Filter from all configs
+                filteredConfigs = apiData.filter(config => {
+                    // Check if config matches search term
+                    const configMatches = searchTerm === '' || 
+                        config.input_value.toLowerCase().includes(searchTerm) ||
+                        (config.enriched_data && config.enriched_data.new_name && 
+                         config.enriched_data.new_name.toLowerCase().includes(searchTerm)) ||
+                        (config.country_text && config.country_text.toLowerCase().includes(searchTerm));
+                    
+                    // Check if config matches type filter
+                    const typeMatches = typeValue === 'all' || 
+                        (config.enriched_data && config.enriched_data.type === typeValue);
+                    
+                    return configMatches && typeMatches;
+                });
+            } else if (currentCategory === 'type' && activeType) {
+                // Filter from selected type
+                const typeConfigs = groupedByType[activeType] || [];
+                filteredConfigs = typeConfigs.filter(config => {
+                    // Check if config matches search term
+                    const configMatches = searchTerm === '' || 
+                        config.input_value.toLowerCase().includes(searchTerm) ||
+                        (config.enriched_data && config.enriched_data.new_name && 
+                         config.enriched_data.new_name.toLowerCase().includes(searchTerm)) ||
+                        (config.country_text && config.country_text.toLowerCase().includes(searchTerm));
+                    
+                    return configMatches;
+                });
+            } else if (currentCategory === 'country' && activeCountry) {
+                // Filter from selected country
+                const countryConfigs = groupedConfigs[activeCountry] || [];
+                filteredConfigs = countryConfigs.filter(config => {
                     // Check if config matches search term
                     const configMatches = searchTerm === '' || 
                         config.input_value.toLowerCase().includes(searchTerm) ||
@@ -353,22 +839,42 @@
                     
                     return configMatches && typeMatches;
                 });
-                
-                if (countryMatches || filteredCountryConfigs.length > 0) {
-                    filteredConfigs[country] = filteredCountryConfigs;
-                }
+            } else if (currentCategory === 'type-country' && activeType && activeCountry) {
+                // Filter from selected type and country
+                const typeCountryConfigs = groupedByTypeCountry[activeType]?.[activeCountry] || [];
+                filteredConfigs = typeCountryConfigs.filter(config => {
+                    // Check if config matches search term
+                    const configMatches = searchTerm === '' || 
+                        config.input_value.toLowerCase().includes(searchTerm) ||
+                        (config.enriched_data && config.enriched_data.new_name && 
+                         config.enriched_data.new_name.toLowerCase().includes(searchTerm));
+                    
+                    return configMatches;
+                });
+            } else if (currentCategory === 'type-country' && activeType) {
+                // Filter from selected type, all countries
+                const allCountriesForType = Object.values(groupedByTypeCountry[activeType] || {}).flat();
+                filteredConfigs = allCountriesForType.filter(config => {
+                    // Check if config matches search term
+                    const configMatches = searchTerm === '' || 
+                        config.input_value.toLowerCase().includes(searchTerm) ||
+                        (config.enriched_data && config.enriched_data.new_name && 
+                         config.enriched_data.new_name.toLowerCase().includes(searchTerm)) ||
+                        (config.country_text && config.country_text.toLowerCase().includes(searchTerm));
+                    
+                    return configMatches;
+                });
             }
             
             // Display filtered configs
-            displayConfigs(activeCountry, filteredConfigs);
+            displayFilteredConfigs(filteredConfigs);
         }
         
-        // Display configurations
-        function displayConfigs(country, configs) {
+        // Display filtered configs
+        function displayFilteredConfigs(configs) {
             configsList.innerHTML = '';
             
-            // If no configs found
-            if (Object.keys(configs).length === 0) {
+            if (configs.length === 0) {
                 configsList.innerHTML = `
                     <div class="card text-center py-10">
                         <span class="material-icons text-5xl text-dark-muted mb-4">search_off</span>
@@ -379,33 +885,27 @@
                 return;
             }
             
-            // Display configs for selected country or all countries
-            const countriesToShow = country === 'all' ? Object.keys(configs) : [country];
-            
-            countriesToShow.forEach(countryName => {
-                if (configs[countryName] && configs[countryName].length > 0) {
-                    const countryCard = createCountryCard(countryName, configs[countryName]);
-                    configsList.appendChild(countryCard);
-                }
-            });
-        }
-        
-        // Create country card
-        function createCountryCard(country, configs) {
+            // Create a card for the filtered results
             const card = document.createElement('div');
             card.className = 'card animate-fade-in';
             
-            const flagCode = getFlagCode(country);
-            const countryEmoji = getCountryEmoji(flagCode);
+            const title = currentCategory === 'type' && activeType
+                ? `${activeType.toUpperCase()} Configurations`
+                : currentCategory === 'country' && activeCountry
+                    ? `${activeCountry} Configurations`
+                    : currentCategory === 'type-country' && activeType && activeCountry
+                        ? `${activeType.toUpperCase()} in ${activeCountry}`
+                        : currentCategory === 'type-country' && activeType
+                            ? `All ${activeType.toUpperCase()} Configurations`
+                            : 'All Configurations';
             
             card.innerHTML = `
                 <div class="flex justify-between items-center mb-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl">${countryEmoji}</span>
-                        <h2 class="text-xl font-bold">${country}</h2>
+                        <h2 class="text-xl font-bold">${title}</h2>
                         <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs">${configs.length} configs</span>
                     </div>
-                    <button class="btn-sm" onclick="copyAllConfigs('${country}')">
+                    <button class="btn-sm" onclick="copyFilteredConfigs()">
                         <span class="material-icons">content_copy</span>
                         Copy All
                     </button>
@@ -415,7 +915,21 @@
                 </div>
             `;
             
-            return card;
+            configsList.appendChild(card);
+        }
+        
+        // Copy filtered configs
+        function copyFilteredConfigs() {
+            const configElements = configsList.querySelectorAll('.config-item');
+            const configs = Array.from(configElements).map(el => el.dataset.config);
+            const configTexts = configs.join('\n');
+            
+            navigator.clipboard.writeText(configTexts).then(() => {
+                showToast(`Copied ${configs.length} configurations!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                showToast('Failed to copy configurations', 'error');
+            });
         }
         
         // Create config item
@@ -431,7 +945,7 @@
             const configTypeColor = getConfigTypeColor(config.enriched_data && config.enriched_data.type);
             
             return `
-                <div class="bg-dark-secondary rounded-lg p-3 flex items-center gap-3">
+                <div class="bg-dark-secondary rounded-lg p-3 flex items-center gap-3 config-item" data-config="${config.input_value}">
                     <div class="flex-1 min-w-0">
                         <div class="flex items-center gap-2 mb-1">
                             <span class="px-2 py-1 rounded text-xs font-medium ${configTypeColor}">${configType}</span>
@@ -456,6 +970,19 @@
                 case 'tuic': return 'bg-pink-500 text-white';
                 case 'hy2': return 'bg-red-500 text-white';
                 default: return 'bg-gray-500 text-white';
+            }
+        }
+        
+        // Get type icon
+        function getTypeIcon(type) {
+            switch(type) {
+                case 'vmess': return 'vpn_lock';
+                case 'vless': return 'security';
+                case 'trojan': return 'shield';
+                case 'ss': return 'lock';
+                case 'tuic': return 'speed';
+                case 'hy2': return 'bolt';
+                default: return 'help_outline';
             }
         }
         
@@ -492,19 +1019,6 @@
             }).catch(err => {
                 console.error('Failed to copy: ', err);
                 showToast('Failed to copy subscription link', 'error');
-            });
-        }
-        
-        // Copy all configs for a country
-        function copyAllConfigs(country) {
-            const configs = groupedConfigs[country] || [];
-            const configTexts = configs.map(config => config.input_value).join('\n');
-            
-            navigator.clipboard.writeText(configTexts).then(() => {
-                showToast(`Copied ${configs.length} configurations for ${country}!`);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                showToast('Failed to copy configurations', 'error');
             });
         }
         
