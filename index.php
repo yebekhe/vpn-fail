@@ -721,6 +721,7 @@ class ProxyScraper
     private const MAX_AGE_SECONDS = 1800; // 30 minutes
     private const CACHE_FILE = 'proxy_cache.json';
     private const CACHE_EXPIRY = 3600; // 1 hour
+    private const OUTPUT_DIR = 'output'; // Output directory for categorized files
     
     private array $countryCodes = [];
     private ?DOMDocument $dom = null;
@@ -739,10 +740,16 @@ class ProxyScraper
             'curl_timeout' => 15,
             'max_concurrent_requests' => 10,
             'name_format' => '{flag} {country}-{type}-{id}', // Default name format
+            'output_format' => 'categorized', // 'categorized' or 'single'
         ], $config);
         
         $this->loadCountryCodes($countryCodesFile);
         $this->dom = new DOMDocument();
+        
+        // Create output directory if it doesn't exist
+        if (!is_dir(self::OUTPUT_DIR)) {
+            mkdir(self::OUTPUT_DIR, 0755, true);
+        }
     }
     
     /**
@@ -1144,13 +1151,18 @@ class ProxyScraper
     }
     
     /**
-     * Saves the final results to JSON and Base64 encoded files.
+     * Saves the final results to multiple categorized files.
      */
     private function saveResults(array $results): void
     {
         // Enrich data with additional information
         $enrichedResults = [];
         $renamedConfigs = [];
+        
+        // Categorized storage
+        $byType = [];
+        $byCountry = [];
+        $byTypeAndCountry = [];
         
         foreach ($results as $result) {
             if (!empty($result['input_value'])) {
@@ -1160,6 +1172,7 @@ class ProxyScraper
                 if ($enrichedData['valid']) {
                     $newName = $this->generateProxyName($enrichedData);
                     $type = $enrichedData['type'];
+                    $country = $enrichedData['country_code'];
                     $parsedConfig = $enrichedData['parsed'];
                     
                     // Update the name in the parsed configuration
@@ -1185,13 +1198,18 @@ class ProxyScraper
                     
                     // Add to renamed configs for subscription
                     $renamedConfigs[] = $newConfigString;
+                    
+                    // Categorize
+                    $byType[$type][] = $enrichedData;
+                    $byCountry[$country][] = $enrichedData;
+                    $byTypeAndCountry[$type][$country][] = $enrichedData;
                 }
                 
                 $enrichedResults[] = array_merge($result, ['enriched_data' => $enrichedData]);
             }
         }
         
-        // Save the detailed JSON output
+        // Save the detailed JSON output (original format)
         $jsonOutput = json_encode($enrichedResults, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         if (file_put_contents("api.json", $jsonOutput) === false) {
             throw new Exception("Failed to write to api.json");
@@ -1204,6 +1222,104 @@ class ProxyScraper
                 throw new Exception("Failed to write to sub-link.txt");
             }
         }
+        
+        // Save categorized files if configured to do so
+        if ($this->config['output_format'] === 'categorized') {
+            $this->saveCategorizedFiles($byType, $byCountry, $byTypeAndCountry);
+        }
+    }
+    
+    /**
+     * Saves categorized files to the output directory.
+     */
+    private function saveCategorizedFiles(array $byType, array $byCountry, array $byTypeAndCountry): void
+    {
+        // Save by type
+        foreach ($byType as $type => $proxies) {
+            $typeDir = self::OUTPUT_DIR . "/by-type/{$type}";
+            if (!is_dir($typeDir)) {
+                mkdir($typeDir, 0755, true);
+            }
+            
+            $configStrings = array_column($proxies, 'input_value');
+            $fileContent = implode("\n", $configStrings);
+            
+            $filename = "{$typeDir}/{$type}.txt";
+            if (file_put_contents($filename, $fileContent) === false) {
+                throw new Exception("Failed to write to {$filename}");
+            }
+            
+            // Also save as JSON
+            $jsonContent = json_encode($proxies, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            $jsonFilename = "{$typeDir}/{$type}.json";
+            if (file_put_contents($jsonFilename, $jsonContent) === false) {
+                throw new Exception("Failed to write to {$jsonFilename}");
+            }
+        }
+        
+        // Save by country
+        foreach ($byCountry as $country => $proxies) {
+            $countryDir = self::OUTPUT_DIR . "/by-country/{$country}";
+            if (!is_dir($countryDir)) {
+                mkdir($countryDir, 0755, true);
+            }
+            
+            $configStrings = array_column($proxies, 'input_value');
+            $fileContent = implode("\n", $configStrings);
+            
+            $filename = "{$countryDir}/{$country}.txt";
+            if (file_put_contents($filename, $fileContent) === false) {
+                throw new Exception("Failed to write to {$filename}");
+            }
+            
+            // Also save as JSON
+            $jsonContent = json_encode($proxies, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            $jsonFilename = "{$countryDir}/{$country}.json";
+            if (file_put_contents($jsonFilename, $jsonContent) === false) {
+                throw new Exception("Failed to write to {$jsonFilename}");
+            }
+        }
+        
+        // Save by type and country
+        foreach ($byTypeAndCountry as $type => $countries) {
+            foreach ($countries as $country => $proxies) {
+                $combinedDir = self::OUTPUT_DIR . "/by-type-country/{$type}";
+                if (!is_dir($combinedDir)) {
+                    mkdir($combinedDir, 0755, true);
+                }
+                
+                $configStrings = array_column($proxies, 'input_value');
+                $fileContent = implode("\n", $configStrings);
+                
+                $filename = "{$combinedDir}/{$country}.txt";
+                if (file_put_contents($filename, $fileContent) === false) {
+                    throw new Exception("Failed to write to {$filename}");
+                }
+                
+                // Also save as JSON
+                $jsonContent = json_encode($proxies, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+                $jsonFilename = "{$combinedDir}/{$country}.json";
+                if (file_put_contents($jsonFilename, $jsonContent) === false) {
+                    throw new Exception("Failed to write to {$jsonFilename}");
+                }
+            }
+        }
+        
+        // Create a summary file
+        $summary = [
+            'total_proxies' => count($byType),
+            'by_type' => array_map('count', $byType),
+            'by_country' => array_map('count', $byCountry),
+            'by_type_and_country' => array_map(function($countries) {
+                return array_map('count', $countries);
+            }, $byTypeAndCountry),
+            'generated_at' => date('c'),
+        ];
+        
+        $summaryJson = json_encode($summary, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        if (file_put_contents(self::OUTPUT_DIR . "/summary.json", $summaryJson) === false) {
+            throw new Exception("Failed to write to summary.json");
+        }
     }
 }
 
@@ -1213,6 +1329,7 @@ header("Content-Type: application/json;");
 // Configuration can be passed to override defaults
 $config = [
     'name_format' => '{flag} {country}-{type}-{id}', // Customize the naming format here
+    'output_format' => 'categorized', // 'categorized' or 'single'
     // Other options:
     // 'name_format' => 'PSG-{country}-{type}-{random}',
     // 'name_format' => '{flag} {server} {type}',
