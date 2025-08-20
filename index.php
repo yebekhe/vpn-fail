@@ -725,6 +725,7 @@ class ProxyScraper
     private array $countryCodes = [];
     private ?DOMDocument $dom = null;
     private array $config = [];
+    private int $proxyCounter = 1;
     
     /**
      * Constructor: Loads necessary data like country codes.
@@ -737,6 +738,7 @@ class ProxyScraper
             'cache_expiry' => self::CACHE_EXPIRY,
             'curl_timeout' => 15,
             'max_concurrent_requests' => 10,
+            'name_format' => '{flag} {country}-{type}-{id}', // Default name format
         ], $config);
         
         $this->loadCountryCodes($countryCodesFile);
@@ -1016,6 +1018,59 @@ class ProxyScraper
     }
     
     /**
+     * Generates a standardized name for a proxy configuration.
+     */
+    private function generateProxyName(array $enrichedData): string
+    {
+        $format = $this->config['name_format'];
+        
+        // Prepare replacements
+        $replacements = [
+            '{flag}' => $enrichedData['flag'],
+            '{country}' => $enrichedData['country_code'],
+            '{type}' => strtoupper($enrichedData['type'] ?? 'unknown'),
+            '{id}' => $this->proxyCounter++,
+            '{random}' => getRandomName(4),
+            '{server}' => $this->getShortServerName($enrichedData),
+            '{port}' => $enrichedData['parsed']['port'] ?? '',
+        ];
+        
+        // Apply replacements
+        $name = str_replace(array_keys($replacements), array_values($replacements), $format);
+        
+        // Clean up the name
+        return preg_replace('/[^\w\s\-\.\p{L}]/u', '', $name);
+    }
+    
+    /**
+     * Gets a shortened version of the server name for display.
+     */
+    private function getShortServerName(array $enrichedData): string
+    {
+        $server = '';
+        
+        if (isset($enrichedData['parsed'])) {
+            if ($enrichedData['type'] === 'vmess') {
+                $server = $enrichedData['parsed']['add'] ?? '';
+            } elseif ($enrichedData['type'] === 'ss') {
+                $server = $enrichedData['parsed']['server_address'] ?? '';
+            } else {
+                $server = $enrichedData['parsed']['hostname'] ?? '';
+            }
+        }
+        
+        // If it's an IP address, just return the last octet
+        if (filter_var($server, FILTER_VALIDATE_IP)) {
+            $parts = explode('.', $server);
+            return end($parts);
+        }
+        
+        // For domain names, return the first part before the first dot
+        $parts = explode('.', $server);
+        return $parts[0] ?? '';
+    }
+    
+    /**
      * Enriches proxy data with additional information.
      */
     private function enrichProxyData(string $inputValue, ?string $countryFromPre): array
@@ -1095,9 +1150,43 @@ class ProxyScraper
     {
         // Enrich data with additional information
         $enrichedResults = [];
+        $renamedConfigs = [];
+        
         foreach ($results as $result) {
             if (!empty($result['input_value'])) {
                 $enrichedData = $this->enrichProxyData($result['input_value'], $result['country_from_pre']);
+                
+                // Only rename valid configurations
+                if ($enrichedData['valid']) {
+                    $newName = $this->generateProxyName($enrichedData);
+                    $type = $enrichedData['type'];
+                    $parsedConfig = $enrichedData['parsed'];
+                    
+                    // Update the name in the parsed configuration
+                    switch ($type) {
+                        case 'vmess':
+                            $parsedConfig['ps'] = $newName;
+                            break;
+                        case 'ss':
+                            $parsedConfig['name'] = $newName;
+                            break;
+                        default: // vless, trojan, tuic, hy2
+                            $parsedConfig['hash'] = $newName;
+                            break;
+                    }
+                    
+                    // Rebuild the configuration string with the new name
+                    $newConfigString = reparseConfig($parsedConfig, $type);
+                    
+                    // Update the enriched data
+                    $enrichedData['input_value'] = $newConfigString;
+                    $enrichedData['parsed'] = $parsedConfig;
+                    $enrichedData['new_name'] = $newName;
+                    
+                    // Add to renamed configs for subscription
+                    $renamedConfigs[] = $newConfigString;
+                }
+                
                 $enrichedResults[] = array_merge($result, ['enriched_data' => $enrichedData]);
             }
         }
@@ -1108,15 +1197,9 @@ class ProxyScraper
             throw new Exception("Failed to write to api.json");
         }
         
-        // Generate and save the Base64 subscription link
-        $output = "";
-        foreach ($enrichedResults as $config) {
-            if (!empty($config['enriched_data']['input_value']) && $config['enriched_data']['valid']) {
-                $output .= $config['enriched_data']['input_value'] . "\n";
-            }
-        }
-        
-        if (!empty($output)) {
+        // Generate and save the Base64 subscription link with renamed configs
+        if (!empty($renamedConfigs)) {
+            $output = implode("\n", $renamedConfigs);
             if (file_put_contents("sub-link.txt", base64_encode($output)) === false) {
                 throw new Exception("Failed to write to sub-link.txt");
             }
@@ -1129,9 +1212,11 @@ header("Content-Type: application/json;");
 
 // Configuration can be passed to override defaults
 $config = [
-    // 'max_age_seconds' => 1800,
-    // 'cache_expiry' => 3600,
-    // 'max_concurrent_requests' => 10,
+    'name_format' => '{flag} {country}-{type}-{id}', // Customize the naming format here
+    // Other options:
+    // 'name_format' => 'PSG-{country}-{type}-{random}',
+    // 'name_format' => '{flag} {server} {type}',
+    // 'name_format' => '{country}-{type}-{port}',
 ];
 
 $scraper = new ProxyScraper('countries.lock', $config);
