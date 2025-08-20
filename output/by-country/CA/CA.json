@@ -1,0 +1,52 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIxMzQuMTk1LjE5OC4xNDciLCJ2IjoiMiIsInBzIjoiIENBLVZNRVNTLTIiLCJwb3J0Ijo0NDMsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwiYWlkIjoiMCIsIm5ldCI6IndzIiwidHlwZSI6IiIsImhvc3QiOiJpbm5hLmNmZCIsInBhdGgiOiJcL2xpbmt2d3MiLCJ0bHMiOiJ0bHMifQ",
+        "country_from_pre": "CA",
+        "type": "vmess",
+        "parsed": {
+            "add": "134.195.198.147",
+            "v": "2",
+            "ps": " CA-VMESS-2",
+            "port": 443,
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "aid": "0",
+            "net": "ws",
+            "type": "",
+            "host": "inna.cfd",
+            "path": "\/linkvws",
+            "tls": "tls"
+        },
+        "is_encrypted": false,
+        "country_code": "CA",
+        "flag": "🇨🇦",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " CA-VMESS-2"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODMuMjI4IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTMiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOmZhbHNlLCJzbmkiOiJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIn0",
+        "country_from_pre": "CA",
+        "type": "vmess",
+        "parsed": {
+            "add": "15.235.83.228",
+            "aid": 0,
+            "host": "",
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "net": "ws",
+            "path": "\/linkvws",
+            "port": 443,
+            "ps": " CA-VMESS-3",
+            "tls": "tls",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": false,
+            "sni": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
+        },
+        "is_encrypted": false,
+        "country_code": "CA",
+        "flag": "🇨🇦",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " CA-VMESS-3"
+    }
+]
