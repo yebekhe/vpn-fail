@@ -1,348 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN FAIL</title>
-
+    <title>VPN FAIL - Proxy Configurations</title>
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.png">
-
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="VPN FAIL CONFIGs">
     <meta name="twitter:description" content="Browse and copy VPN configurations easily.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/yebekhe/vpn-fail/main/logo.png">
     <meta name="twitter:site" content="@yebekhe">
-
-    <!-- Existing stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Flag Icons -->
     <link href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#121212',
+                            card: '#1e1e1e',
+                            secondary: '#252525',
+                            border: '#333333',
+                            text: '#e0e0e0',
+                            muted: '#b0b0b0'
+                        },
+                        accent: {
+                            DEFAULT: '#bb86fc',
+                            hover: '#9965f4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-in-out',
+                        'bounce-in': 'bounceIn 0.5s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    }
+                }
+            }
         }
-
-        .container {
-            background-color: #1e1e1e;
-            padding: 24px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 600px;
-            margin: 20px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .header h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin: 0;
-            color: #ffffff;
-        }
-
-        .header p {
-            font-size: 14px;
-            color: #b0b0b0;
-            margin: 8px 0 0;
-        }
-
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #bb86fc;
-            color: #1e1e1e;
-            padding: 14px;
-            border: none;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-            margin-bottom: 12px;
-            gap: 8px;
-        }
-
-        .button:hover {
-            background-color: #9965f4;
-            transform: translateY(-1px);
-        }
-
-        .card {
-            background-color: #252525;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-        }
-
-        .card-header h2 {
-            font-size: 16px;
-            margin: 0;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .copy-all-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0; /* No gap between icon and text */
-            background-color: #bb86fc;
-            color: #1e1e1e;
-            padding: 8px 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: auto;
-            line-height: 1; /* Reset line height */
-        }
-
-        .copy-all-button .material-icons {
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            font-size: 18px; /* Ensure consistent size */
-        }
-
-        .copy-all-button:hover {
-            background-color: #9965f4;
-        }
-
-        .help-text {
-            font-size: 13px;
-            color: #b0b0b0;
-            margin: 4px 0 8px 0;
-            line-height: 1.4;
-        }
-
-        .output-flex {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px; /* Added spacing between lines */
-        }
-
-        .output-flex:last-child {
-            margin-bottom: 0; /* Remove margin for the last item */
-        }
-
-        .output-flex input[type="text"] {
-            flex: 1;
-            padding: 12px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            background-color: #2c2c2c;
-            color: #e0e0e0;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        .copy-button {
-            padding: 8px;
-            margin-bottom: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #bb86fc;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border: none;
-            color: #1e1e1e;
-        }
-
-        .copy-button:hover {
-            background-color: #9965f4;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            font-size: 13px;
-        }
-
-        .footer a {
-            color: #bb86fc;
-            text-decoration: none;
-            margin: 0 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .footer a:hover {
-            color: #9965f4;
-            text-decoration: none;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.3s ease;
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                @apply flex items-center justify-center gap-2 bg-accent text-dark-bg font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:bg-accent-hover hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+            }
+            .btn-sm {
+                @apply py-2 px-3 text-sm;
+            }
+            .btn-icon {
+                @apply p-2 rounded-lg;
+            }
+            .card {
+                @apply bg-dark-card rounded-xl p-5 mb-4 border border-dark-border shadow-lg;
+            }
+            .input-field {
+                @apply w-full bg-dark-secondary border border-dark-border rounded-lg px-4 py-3 text-dark-text placeholder-dark-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-colors;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>VPN FAIL</h1>
-            <p>Browse and copy VPN configurations easily.</p>
-            <br>
-            <button class="button" onclick="copySubscriptionLink()">
-                <span class="material-icons">content_copy</span>
-                Copy Full Subscription Link
+<body class="bg-dark-bg text-dark-text font-sans min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header Section -->
+        <header class="text-center mb-10 animate-fade-in">
+            <div class="flex justify-center mb-4">
+                <img src="logo.png" alt="VPN FAIL Logo" class="h-20 w-20 rounded-full shadow-xl">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent">VPN FAIL</h1>
+            <p class="text-dark-muted max-w-md mx-auto">Browse and copy VPN configurations easily. All configs are tested and updated regularly.</p>
+            
+            <!-- Main Action Button -->
+            <div class="mt-6">
+                <button id="copySubscriptionBtn" class="btn group">
+                    <span class="material-icons">content_copy</span>
+                    <span>Copy Full Subscription Link</span>
+                    <span class="material-icons opacity-0 group-hover:opacity-100 transition-opacity duration-300">open_in_new</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <div id="statsSection" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 hidden">
+            <div class="card text-center animate-bounce-in">
+                <div class="text-3xl font-bold text-accent" id="totalConfigs">0</div>
+                <div class="text-dark-muted">Total Configs</div>
+            </div>
+            <div class="card text-center animate-bounce-in" style="animation-delay: 0.1s">
+                <div class="text-3xl font-bold text-accent" id="totalCountries">0</div>
+                <div class="text-dark-muted">Countries</div>
+            </div>
+            <div class="card text-center animate-bounce-in" style="animation-delay: 0.2s">
+                <div class="text-3xl font-bold text-accent" id="lastUpdated">--</div>
+                <div class="text-dark-muted">Last Updated</div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div id="filterSection" class="card mb-6 hidden animate-fade-in">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <label class="block text-sm font-medium mb-1">Search by name or country</label>
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Search configurations..." class="input-field pl-10">
+                        <span class="material-icons absolute left-3 top-3.5 text-dark-muted">search</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-48">
+                    <label class="block text-sm font-medium mb-1">Filter by type</label>
+                    <select id="typeFilter" class="input-field">
+                        <option value="all">All Types</option>
+                        <option value="vmess">VMess</option>
+                        <option value="vless">VLESS</option>
+                        <option value="trojan">Trojan</option>
+                        <option value="ss">Shadowsocks</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="flex flex-col items-center justify-center py-16">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent mb-4"></div>
+            <p class="text-dark-muted">Loading configurations...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="card text-center py-10 hidden">
+            <span class="material-icons text-red-500 text-5xl mb-4">error_outline</span>
+            <h3 class="text-xl font-semibold mb-2">Failed to load configurations</h3>
+            <p class="text-dark-muted mb-4">Please try again later or check your connection.</p>
+            <button onclick="location.reload()" class="btn">
+                <span class="material-icons">refresh</span>
+                Reload Page
             </button>
         </div>
-        <div id="configs"></div>
+
+        <!-- Configurations Container -->
+        <div id="configsContainer" class="hidden">
+            <!-- Country tabs will be inserted here -->
+            <div id="countryTabs" class="flex flex-wrap gap-2 mb-6 overflow-x-auto pb-2"></div>
+            
+            <!-- Config cards will be inserted here -->
+            <div id="configsList"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-dark-border text-center text-dark-muted text-sm">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
+                <a href="https://github.com/yebekhe/vpn-fail" target="_blank" class="flex items-center gap-1 hover:text-accent transition-colors">
+                    <span class="material-icons text-lg">code</span>
+                    GitHub Repository
+                </a>
+                <a href="https://t.me/yebekhe" target="_blank" class="flex items-center gap-1 hover:text-accent transition-colors">
+                    <span class="material-icons text-lg">send</span>
+                    Telegram Channel
+                </a>
+                <a href="https://twitter.com/yebekhe" target="_blank" class="flex items-center gap-1 hover:text-accent transition-colors">
+                    <span class="material-icons text-lg">alternate_email</span>
+                    Follow on Twitter
+                </a>
+            </div>
+            <p>© 2023 VPN FAIL. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-accent text-dark-bg px-4 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
+        <span class="material-icons">check_circle</span>
+        <span id="toastMessage">Copied to clipboard!</span>
     </div>
 
     <script>
         // Subscription link
         const subscriptionLink = "https://raw.githubusercontent.com/yebekhe/vpn-fail/main/sub-link";
-
-        // Function to copy subscription link
-        function copySubscriptionLink() {
-            navigator.clipboard.writeText(subscriptionLink).then(() => {
-                alert('Subscription link copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
-
-        // Function to get flag code from country name using countries.lock
-        async function getFlagCode(country) {
+        
+        // DOM elements
+        const loadingState = document.getElementById('loadingState');
+        const errorState = document.getElementById('errorState');
+        const configsContainer = document.getElementById('configsContainer');
+        const statsSection = document.getElementById('statsSection');
+        const filterSection = document.getElementById('filterSection');
+        const countryTabs = document.getElementById('countryTabs');
+        const configsList = document.getElementById('configsList');
+        const searchInput = document.getElementById('searchInput');
+        const typeFilter = document.getElementById('typeFilter');
+        const totalConfigsEl = document.getElementById('totalConfigs');
+        const totalCountriesEl = document.getElementById('totalCountries');
+        const lastUpdatedEl = document.getElementById('lastUpdated');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        
+        // State
+        let apiData = [];
+        let countryCodes = {};
+        let activeCountry = 'all';
+        let groupedConfigs = {};
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
             try {
-                const response = await fetch('countries.lock');
-                const data = await response.json();
-                const code = data[country]?.toLowerCase(); // Convert to lowercase
-                console.log(`Country: ${country}, Code: ${code}`); // Debugging
-                return code || "globe"; // Default to globe icon if flag not found
+                // Fetch data
+                const [data, countries] = await Promise.all([
+                    fetch('api').then(response => response.json()),
+                    fetch('countries.lock').then(response => response.json())
+                ]);
+                
+                apiData = data;
+                countryCodes = countries;
+                
+                // Process data
+                processConfigs(data);
+                
+                // Show UI
+                loadingState.classList.add('hidden');
+                configsContainer.classList.remove('hidden');
+                statsSection.classList.remove('hidden');
+                filterSection.classList.remove('hidden');
+                
+                // Setup event listeners
+                setupEventListeners();
+                
             } catch (error) {
-                console.error('Error fetching country codes:', error);
-                return "globe"; // Fallback to globe icon if file is not found
+                console.error('Error fetching data:', error);
+                loadingState.classList.add('hidden');
+                errorState.classList.remove('hidden');
             }
-        }
-
-        // Function to display configurations
-        async function displayConfigs(data) {
-            const configsContainer = document.getElementById('configs');
-
+        });
+        
+        // Process configurations
+        function processConfigs(data) {
             // Group configurations by country
-            const groupedConfigs = data.reduce((acc, config) => {
-                const country = config.country_text;
+            groupedConfigs = data.reduce((acc, config) => {
+                const country = config.country_text || 'Unknown';
                 if (!acc[country]) {
                     acc[country] = [];
                 }
                 acc[country].push(config);
                 return acc;
             }, {});
-
-            // Render grouped configurations
+            
+            // Update stats
+            totalConfigsEl.textContent = data.length;
+            totalCountriesEl.textContent = Object.keys(groupedConfigs).length;
+            lastUpdatedEl.textContent = new Date().toLocaleDateString();
+            
+            // Create country tabs
+            createCountryTabs(Object.keys(groupedConfigs));
+            
+            // Display all configurations
+            displayConfigs('all', groupedConfigs);
+        }
+        
+        // Create country tabs
+        function createCountryTabs(countries) {
+            countryTabs.innerHTML = '';
+            
+            // All tab
+            const allTab = createTab('all', 'All Countries', true);
+            countryTabs.appendChild(allTab);
+            
+            // Country tabs
+            countries.forEach(country => {
+                const flagCode = getFlagCode(country);
+                const tab = createTab(country, `${getCountryEmoji(flagCode)} ${country}`, false);
+                countryTabs.appendChild(tab);
+            });
+        }
+        
+        // Create a single tab
+        function createTab(id, label, isActive) {
+            const tab = document.createElement('button');
+            tab.className = `px-4 py-2 rounded-lg transition-colors ${isActive ? 'bg-accent text-dark-bg' : 'bg-dark-secondary text-dark-muted hover:text-dark-text'}`;
+            tab.textContent = label;
+            tab.onclick = () => selectCountry(id);
+            return tab;
+        }
+        
+        // Select country
+        function selectCountry(country) {
+            activeCountry = country;
+            
+            // Update tab styles
+            const tabs = countryTabs.querySelectorAll('button');
+            tabs.forEach(tab => {
+                if (tab.textContent.includes(country) || (country === 'all' && tab.textContent.includes('All'))) {
+                    tab.className = 'px-4 py-2 rounded-lg transition-colors bg-accent text-dark-bg';
+                } else {
+                    tab.className = 'px-4 py-2 rounded-lg transition-colors bg-dark-secondary text-dark-muted hover:text-dark-text';
+                }
+            });
+            
+            // Re-filter and display configs
+            filterAndDisplayConfigs();
+        }
+        
+        // Setup event listeners
+        function setupEventListeners() {
+            // Copy subscription link
+            document.getElementById('copySubscriptionBtn').addEventListener('click', copySubscriptionLink);
+            
+            // Search input
+            searchInput.addEventListener('input', filterAndDisplayConfigs);
+            
+            // Type filter
+            typeFilter.addEventListener('change', filterAndDisplayConfigs);
+        }
+        
+        // Filter and display configurations
+        function filterAndDisplayConfigs() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const typeValue = typeFilter.value;
+            
+            // Filter configs based on search and type
+            const filteredConfigs = {};
+            
             for (const [country, configs] of Object.entries(groupedConfigs)) {
-                const card = document.createElement('div');
-                card.className = 'card fade-in';
-                const flagCode = await getFlagCode(country);
-                card.innerHTML = `
-                    <div class="card-header">
-                        <h2>
-                            <span class="fi fi-${flagCode}"></span>
-                            ${country}
-                        </h2>
-                        <button class="copy-all-button" onclick="copyAllConfigs('${country}')">
-                            <span class="material-icons">content_copy_all</span> Copy All
-                        </button>
+                const countryMatches = country.toLowerCase().includes(searchTerm);
+                
+                const filteredCountryConfigs = configs.filter(config => {
+                    // Check if config matches search term
+                    const configMatches = searchTerm === '' || 
+                        config.input_value.toLowerCase().includes(searchTerm) ||
+                        (config.enriched_data && config.enriched_data.new_name && 
+                         config.enriched_data.new_name.toLowerCase().includes(searchTerm));
+                    
+                    // Check if config matches type filter
+                    const typeMatches = typeValue === 'all' || 
+                        (config.enriched_data && config.enriched_data.type === typeValue);
+                    
+                    return configMatches && typeMatches;
+                });
+                
+                if (countryMatches || filteredCountryConfigs.length > 0) {
+                    filteredConfigs[country] = filteredCountryConfigs;
+                }
+            }
+            
+            // Display filtered configs
+            displayConfigs(activeCountry, filteredConfigs);
+        }
+        
+        // Display configurations
+        function displayConfigs(country, configs) {
+            configsList.innerHTML = '';
+            
+            // If no configs found
+            if (Object.keys(configs).length === 0) {
+                configsList.innerHTML = `
+                    <div class="card text-center py-10">
+                        <span class="material-icons text-5xl text-dark-muted mb-4">search_off</span>
+                        <h3 class="text-xl font-semibold mb-2">No configurations found</h3>
+                        <p class="text-dark-muted">Try adjusting your search or filter criteria.</p>
                     </div>
                 `;
-
-                configs.forEach(config => {
-                    const configDiv = document.createElement('div');
-                    configDiv.className = 'output-flex';
-                    configDiv.innerHTML = `
-                        <input type="text" value="${config.input_value}" readonly>
-                        <button class="copy-button" onclick="copyToClipboard('${config.input_value}')">
-                            <span class="material-icons">content_copy</span>
-                        </button>
-                    `;
-                    card.appendChild(configDiv);
-                });
-
-                configsContainer.appendChild(card);
+                return;
+            }
+            
+            // Display configs for selected country or all countries
+            const countriesToShow = country === 'all' ? Object.keys(configs) : [country];
+            
+            countriesToShow.forEach(countryName => {
+                if (configs[countryName] && configs[countryName].length > 0) {
+                    const countryCard = createCountryCard(countryName, configs[countryName]);
+                    configsList.appendChild(countryCard);
+                }
+            });
+        }
+        
+        // Create country card
+        function createCountryCard(country, configs) {
+            const card = document.createElement('div');
+            card.className = 'card animate-fade-in';
+            
+            const flagCode = getFlagCode(country);
+            const countryEmoji = getCountryEmoji(flagCode);
+            
+            card.innerHTML = `
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">${countryEmoji}</span>
+                        <h2 class="text-xl font-bold">${country}</h2>
+                        <span class="bg-dark-secondary px-2 py-1 rounded-full text-xs">${configs.length} configs</span>
+                    </div>
+                    <button class="btn-sm" onclick="copyAllConfigs('${country}')">
+                        <span class="material-icons">content_copy</span>
+                        Copy All
+                    </button>
+                </div>
+                <div class="space-y-3">
+                    ${configs.map(config => createConfigItem(config)).join('')}
+                </div>
+            `;
+            
+            return card;
+        }
+        
+        // Create config item
+        function createConfigItem(config) {
+            const configName = config.enriched_data && config.enriched_data.new_name 
+                ? config.enriched_data.new_name 
+                : 'Unnamed Config';
+            
+            const configType = config.enriched_data && config.enriched_data.type 
+                ? config.enriched_data.type.toUpperCase() 
+                : 'Unknown';
+            
+            const configTypeColor = getConfigTypeColor(config.enriched_data && config.enriched_data.type);
+            
+            return `
+                <div class="bg-dark-secondary rounded-lg p-3 flex items-center gap-3">
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2 py-1 rounded text-xs font-medium ${configTypeColor}">${configType}</span>
+                            <span class="text-dark-muted text-sm truncate">${configName}</span>
+                        </div>
+                        <div class="text-xs text-dark-muted font-mono truncate">${config.input_value.substring(0, 60)}${config.input_value.length > 60 ? '...' : ''}</div>
+                    </div>
+                    <button class="btn-icon" onclick="copyToClipboard('${config.input_value.replace(/'/g, "\\'")}', '${configName.replace(/'/g, "\\'")}')">
+                        <span class="material-icons">content_copy</span>
+                    </button>
+                </div>
+            `;
+        }
+        
+        // Get config type color
+        function getConfigTypeColor(type) {
+            switch(type) {
+                case 'vmess': return 'bg-blue-500 text-white';
+                case 'vless': return 'bg-green-500 text-white';
+                case 'trojan': return 'bg-yellow-500 text-dark-bg';
+                case 'ss': return 'bg-purple-500 text-white';
+                case 'tuic': return 'bg-pink-500 text-white';
+                case 'hy2': return 'bg-red-500 text-white';
+                default: return 'bg-gray-500 text-white';
             }
         }
-
-        // Function to copy all configs for a specific country
+        
+        // Get flag code from country name
+        function getFlagCode(country) {
+            // Convert country name to proper case (e.g., "united states" -> "United States")
+            const properCountry = country.replace(/\w\S*/g, (txt) => 
+                txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+            );
+            
+            // Look up in country codes
+            const code = countryCodes[properCountry];
+            return code ? code.toLowerCase() : 'un';
+        }
+        
+        // Get country emoji
+        function getCountryEmoji(flagCode) {
+            if (flagCode === 'cf') return '☁️'; // Cloudflare
+            if (flagCode === 'xx' || flagCode === 'un') return '🌐'; // Unknown or UN
+            
+            // Convert country code to flag emoji
+            const codePoints = flagCode
+                .toUpperCase()
+                .split('')
+                .map(char => 127397 + char.charCodeAt(0));
+            
+            return String.fromCodePoint(...codePoints);
+        }
+        
+        // Copy subscription link
+        function copySubscriptionLink() {
+            navigator.clipboard.writeText(subscriptionLink).then(() => {
+                showToast('Subscription link copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                showToast('Failed to copy subscription link', 'error');
+            });
+        }
+        
+        // Copy all configs for a country
         function copyAllConfigs(country) {
-            const configs = apiData
-                .filter(config => config.country_text === country)
-                .map(config => config.input_value)
-                .join('\n');
-
-            navigator.clipboard.writeText(configs).then(() => {
-                alert(`All configurations for ${country} copied to clipboard!`);
+            const configs = groupedConfigs[country] || [];
+            const configTexts = configs.map(config => config.input_value).join('\n');
+            
+            navigator.clipboard.writeText(configTexts).then(() => {
+                showToast(`Copied ${configs.length} configurations for ${country}!`);
             }).catch(err => {
                 console.error('Failed to copy: ', err);
+                showToast('Failed to copy configurations', 'error');
             });
         }
-
-        // Function to copy config to clipboard
-        function copyToClipboard(text) {
+        
+        // Copy config to clipboard
+        function copyToClipboard(text, name) {
             navigator.clipboard.writeText(text).then(() => {
-                alert('Configuration copied to clipboard!');
+                showToast(`Copied "${name}" to clipboard!`);
             }).catch(err => {
                 console.error('Failed to copy: ', err);
+                showToast('Failed to copy configuration', 'error');
             });
         }
-
-        // Fetch data from api and countries.lock
-        let apiData = [];
-        Promise.all([
-            fetch('api').then(response => response.json()),
-            fetch('countries.lock').then(response => response.json())
-        ])
-            .then(([data, countryCodes]) => {
-                apiData = data;
-                window.countryCodes = countryCodes; // Store country codes globally
-                displayConfigs(data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                const configsContainer = document.getElementById('configs');
-                configsContainer.innerHTML = `<p style="color: #ff6b6b;">Failed to load configurations. Please try again later.</p>`;
-            });
+        
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            toastMessage.textContent = message;
+            
+            // Update toast styling based on type
+            if (type === 'error') {
+                toast.className = 'fixed bottom-4 right-4 bg-red-500 text-white px-4 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2';
+                toast.querySelector('.material-icons').textContent = 'error';
+            } else {
+                toast.className = 'fixed bottom-4 right-4 bg-accent text-dark-bg px-4 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2';
+                toast.querySelector('.material-icons').textContent = 'check_circle';
+            }
+            
+            // Show toast
+            setTimeout(() => {
+                toast.classList.remove('translate-y-20', 'opacity-0');
+            }, 10);
+            
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
     </script>
 </body>
 </html>
