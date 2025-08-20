@@ -718,7 +718,7 @@ class ProxyScraper
 {
     private const BASE_URL = "https://vpn.fail/free-proxy/type/v2ray";
     private const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36";
-    private const MAX_AGE_SECONDS = 1800; // 30 minutes
+    private const MAX_AGE_SECONDS = 86400; // Increased to 24 hours
     private const CACHE_FILE = 'proxy_cache.json';
     private const CACHE_EXPIRY = 3600; // 1 hour
     private const OUTPUT_DIR = 'output'; // Output directory for categorized files
@@ -737,10 +737,12 @@ class ProxyScraper
             'max_age_seconds' => self::MAX_AGE_SECONDS,
             'cache_file' => self::CACHE_FILE,
             'cache_expiry' => self::CACHE_EXPIRY,
-            'curl_timeout' => 15,
-            'max_concurrent_requests' => 10,
-            'name_format' => '{flag} {country}-{type}-{id}', // Default name format
-            'output_format' => 'categorized', // 'categorized' or 'single'
+            'curl_timeout' => 30, // Increased from 15
+            'connect_timeout' => 10, // New parameter
+            'max_concurrent_requests' => 20, // Increased from 10
+            'max_articles' => 100, // New parameter to limit articles
+            'name_format' => '{flag} {country}-{type}-{id}',
+            'output_format' => 'categorized',
         ], $config);
         
         $this->loadCountryCodes($countryCodesFile);
@@ -798,7 +800,7 @@ class ProxyScraper
             CURLOPT_USERAGENT => self::USER_AGENT,
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_TIMEOUT => $this->config['curl_timeout'],
-            CURLOPT_CONNECTTIMEOUT => 5,
+            CURLOPT_CONNECTTIMEOUT => $this->config['connect_timeout'],
         ]);
         
         $content = curl_exec($ch);
@@ -884,8 +886,14 @@ class ProxyScraper
         $articleNodes = $xpath->query('//article');
         $articles = [];
         $currentTime = time();
+        $maxArticles = $this->config['max_articles'];
+        $processedArticles = 0;
         
         foreach ($articleNodes as $node) {
+            if ($processedArticles >= $maxArticles) {
+                break;
+            }
+            
             $timeSpan = $xpath->query('.//div[contains(@class, "col-sm-3 text-right")]//span', $node)->item(0);
             $timeValue = $timeSpan ? (int)trim($timeSpan->textContent) : 0;
             
@@ -902,6 +910,7 @@ class ProxyScraper
                     'country_text' => $countryNode ? trim($countryNode->textContent) : "XX",
                     'time_value' => $timeValue,
                 ];
+                $processedArticles++;
             }
         }
         
@@ -945,7 +954,7 @@ class ProxyScraper
                 CURLOPT_USERAGENT => self::USER_AGENT,
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_TIMEOUT => $this->config['curl_timeout'],
-                CURLOPT_CONNECTTIMEOUT => 5,
+                CURLOPT_CONNECTTIMEOUT => $this->config['connect_timeout'],
             ]);
             curl_multi_add_handle($multiHandle, $ch);
             $curlHandles[$index] = $ch;
@@ -1326,14 +1335,17 @@ class ProxyScraper
 // --- Main Execution ---
 header("Content-Type: application/json;");
 
-// Configuration can be passed to override defaults
+// Configuration to increase fetched configs
 $config = [
-    'name_format' => '{flag} {country}-{type}-{id}', // Customize the naming format here
-    'output_format' => 'categorized', // 'categorized' or 'single'
-    // Other options:
-    // 'name_format' => 'PSG-{country}-{type}-{random}',
-    // 'name_format' => '{flag} {server} {type}',
-    // 'name_format' => '{country}-{type}-{port}',
+    'name_format' => '{flag} {country}-{type}-{id}',
+    'output_format' => 'categorized',
+    
+    // Increase these values to fetch more configs:
+    'max_age_seconds' => 86400, // 24 hours instead of 30 minutes
+    'max_concurrent_requests' => 20, // More concurrent requests
+    'curl_timeout' => 30, // Longer timeout per request
+    'connect_timeout' => 10, // Longer connection timeout
+    'max_articles' => 100, // Maximum number of articles to process
 ];
 
 $scraper = new ProxyScraper('countries.lock', $config);
