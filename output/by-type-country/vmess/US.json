@@ -104,33 +104,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " US-VMESS-14"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNTQuOTAuNDkuNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiZmJmZmViNmItYjVlNS00Zjc3LTg4ODgtYzc5MTlmYmViMGFkIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI1ODg2OCIsInBzIjoiIFVTLVZNRVNTLTI5Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ",
-        "country_from_pre": "US",
-        "type": "vmess",
-        "parsed": {
-            "add": "154.90.49.57",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "",
-            "id": "fbffeb6b-b5e5-4f77-8888-c7919fbeb0ad",
-            "net": "tcp",
-            "path": "",
-            "port": "58868",
-            "ps": " US-VMESS-29",
-            "scy": "auto",
-            "sni": "",
-            "tls": "",
-            "type": "none",
-            "v": "2"
-        },
-        "is_encrypted": false,
-        "country_code": "US",
-        "flag": "🇺🇸",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " US-VMESS-29"
     }
 ]
