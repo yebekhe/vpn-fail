@@ -1,29 +1,29 @@
 {
     "total_proxies": 1,
     "by_type": {
-        "vmess": 21
+        "vmess": 25
     },
     "by_country": {
-        "NL": 9,
-        "GB": 2,
+        "NL": 10,
         "US": 4,
-        "CA": 2,
-        "SG": 1,
+        "CA": 5,
+        "TW": 1,
+        "DE": 1,
         "XX": 1,
-        "IN": 1,
-        "DE": 1
+        "SG": 1,
+        "GB": 2
     },
     "by_type_and_country": {
         "vmess": {
-            "NL": 9,
-            "GB": 2,
+            "NL": 10,
             "US": 4,
-            "CA": 2,
-            "SG": 1,
+            "CA": 5,
+            "TW": 1,
+            "DE": 1,
             "XX": 1,
-            "IN": 1,
-            "DE": 1
+            "SG": 1,
+            "GB": 2
         }
     },
-    "generated_at": "2025-08-30T19:09:38+00:00"
+    "generated_at": "2025-08-30T20:12:59+00:00"
 }
