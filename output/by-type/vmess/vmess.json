@@ -716,31 +716,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " CA-VMESS-27"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiJ2Yy5mbHkuZGV2IiwiYWlkIjozMiwiaG9zdCI6InZjLmZseS5kZXYiLCJpZCI6IjM1Mzc5MjE5LTY1MzUtNGYyZS1hNGZlLTNlNDRmNjFlMGVlZSIsIm5ldCI6IndzIiwicGF0aCI6IlwvdmMiLCJwb3J0Ijo0NDMsInBzIjoiIE5MLVZNRVNTLTI4IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5IjpmYWxzZSwic25pIjoidmMuZmx5LmRldiJ9",
-        "country_from_pre": "NL",
-        "type": "vmess",
-        "parsed": {
-            "add": "vc.fly.dev",
-            "aid": 32,
-            "host": "vc.fly.dev",
-            "id": "35379219-6535-4f2e-a4fe-3e44f61e0eee",
-            "net": "ws",
-            "path": "\/vc",
-            "port": 443,
-            "ps": " NL-VMESS-28",
-            "tls": "tls",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": false,
-            "sni": "vc.fly.dev"
-        },
-        "is_encrypted": false,
-        "country_code": "NL",
-        "flag": "🇳🇱",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " NL-VMESS-28"
     }
 ]
