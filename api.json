@@ -874,36 +874,5 @@
             "valid": true,
             "new_name": " NL-VMESS-26"
         }
-    },
-    {
-        "first_href": "https:\/\/vpn.fail\/free-proxy\/ip\/134.195.198.147",
-        "country_text": "United States",
-        "time_value": 1756586438,
-        "input_value": "vmess:\/\/eyJhZGQiOiAiMTM0LjE5NS4xOTguMTQ3IiwgInYiOiAiMiIsICJwcyI6ICJcdTUzMTdcdTdmOGVcdTU3MzBcdTUzM2EgdjJyYXlmcmVlLmV1Lm9yZyIsICJwb3J0IjogNDQzLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIiIsICJob3N0IjogImlubmEuY2ZkIiwgInBhdGgiOiAiL2xpbmt2d3MiLCAidGxzIjogInRscyJ9",
-        "country_from_pre": "CA",
-        "enriched_data": {
-            "input_value": "vmess:\/\/eyJhZGQiOiIxMzQuMTk1LjE5OC4xNDciLCJ2IjoiMiIsInBzIjoiIENBLVZNRVNTLTI3IiwicG9ydCI6NDQzLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsImFpZCI6IjAiLCJuZXQiOiJ3cyIsInR5cGUiOiIiLCJob3N0IjoiaW5uYS5jZmQiLCJwYXRoIjoiXC9saW5rdndzIiwidGxzIjoidGxzIn0",
-            "country_from_pre": "CA",
-            "type": "vmess",
-            "parsed": {
-                "add": "134.195.198.147",
-                "v": "2",
-                "ps": " CA-VMESS-27",
-                "port": 443,
-                "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-                "aid": "0",
-                "net": "ws",
-                "type": "",
-                "host": "inna.cfd",
-                "path": "\/linkvws",
-                "tls": "tls"
-            },
-            "is_encrypted": false,
-            "country_code": "CA",
-            "flag": "🇨🇦",
-            "is_cloudflare": false,
-            "valid": true,
-            "new_name": " CA-VMESS-27"
-        }
     }
 ]
