@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE4OCIsImFpZCI6NjQsImhvc3QiOiJ3d3cuMzIyNzgxMTcueHl6IiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3BhdGhcLzE3MDczMzEzMjIzMyIsInBvcnQiOjQ0MywicHMiOiIgU0ctVk1FU1MtMzEiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE4OCIsImFpZCI6NjQsImhvc3QiOiJ3d3cuMzIyNzgxMTcueHl6IiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3BhdGhcLzE3MDczMzEzMjIzMyIsInBvcnQiOjQ0MywicHMiOiIgU0ctVk1FU1MtMTMiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "SG",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/path\/170733132233",
             "port": 443,
-            "ps": " SG-VMESS-31",
+            "ps": " SG-VMESS-13",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -23,6 +23,6 @@
         "flag": "🇸🇬",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " SG-VMESS-31"
+        "new_name": " SG-VMESS-13"
     }
 ]
