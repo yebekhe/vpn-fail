@@ -1704,38 +1704,5 @@
             "valid": true,
             "new_name": " GB-VMESS-51"
         }
-    },
-    {
-        "first_href": "https:\/\/vpn.fail\/free-proxy\/ip\/61.111.244.51",
-        "country_text": "Korea",
-        "time_value": 1757456316,
-        "input_value": "vmess:\/\/ewogICAgImFkZCI6ICI2MS4xMTEuMjQ0LjUxIiwKICAgICJhaWQiOiAwLAogICAgImhvc3QiOiAiIiwKICAgICJpZCI6ICJmZmY2MGYwMC1kOWM4LTRmZjctOTU2NC1kNDQ3MjA5NzQ3M2IiLAogICAgIm5ldCI6ICJ3cyIsCiAgICAicGF0aCI6ICIvYXJraT9lZD0yMDQ4IiwKICAgICJwb3J0IjogNjExNTUsCiAgICAicHMiOiAi8J+HsPCfh7dLUi02MS4xMTEuMjQ0LjUxLTEwNzUiLAogICAgInRscyI6ICIiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==",
-        "country_from_pre": "XX",
-        "enriched_data": {
-            "input_value": "vmess:\/\/eyJhZGQiOiI2MS4xMTEuMjQ0LjUxIiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJmZmY2MGYwMC1kOWM4LTRmZjctOTU2NC1kNDQ3MjA5NzQ3M2IiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjYxMTU1LCJwcyI6IiBYWC1WTUVTUy01MiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-            "country_from_pre": "XX",
-            "type": "vmess",
-            "parsed": {
-                "add": "61.111.244.51",
-                "aid": 0,
-                "host": "",
-                "id": "fff60f00-d9c8-4ff7-9564-d4472097473b",
-                "net": "ws",
-                "path": "\/arki?ed=2048",
-                "port": 61155,
-                "ps": " XX-VMESS-52",
-                "tls": "",
-                "type": "auto",
-                "security": "auto",
-                "skip-cert-verify": true,
-                "sni": ""
-            },
-            "is_encrypted": false,
-            "country_code": "XX",
-            "flag": "🏳️",
-            "is_cloudflare": false,
-            "valid": true,
-            "new_name": " XX-VMESS-52"
-        }
     }
 ]
