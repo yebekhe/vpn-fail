@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDMuMjI3LjYyLjE0MiIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNzM4ZjJlYzYtZTAzNi00OTkyLWJmZjAtMWNhNTcyZDIzMDgxIiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0Ijo1MDEzNywicHMiOiIgWFgtVk1FU1MtMjQiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIyMDMuMjI3LjYyLjE0MiIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNzM4ZjJlYzYtZTAzNi00OTkyLWJmZjAtMWNhNTcyZDIzMDgxIiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0Ijo1MDEzNywicHMiOiIgWFgtVk1FU1MtMzEiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "XX",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 50137,
-            "ps": " XX-VMESS-24",
+            "ps": " XX-VMESS-31",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,10 +23,10 @@
         "flag": "🏳️",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " XX-VMESS-24"
+        "new_name": " XX-VMESS-31"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiJ2MTAuaGVkdWlhbi5saW5rIiwiYWlkIjoyLCJob3N0IjoidjEwLmhlZHVpYW4ubGluayIsImlkIjoiY2JiM2Y4NzctZDFmYi0zNDRjLTg3YTktZDE1M2JmZmQ1NDg0IiwibmV0Ijoid3MiLCJwYXRoIjoiXC9vb29vIiwicG9ydCI6MzA4MDcsInBzIjoiIFhYLVZNRVNTLTM0IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5IjpmYWxzZSwic25pIjoiYmFpZHUuY29tIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiJ2MTAuaGVkdWlhbi5saW5rIiwiYWlkIjoyLCJob3N0IjoidjEwLmhlZHVpYW4ubGluayIsImlkIjoiY2JiM2Y4NzctZDFmYi0zNDRjLTg3YTktZDE1M2JmZmQ1NDg0IiwibmV0Ijoid3MiLCJwYXRoIjoiXC9vb29vIiwicG9ydCI6MzA4MDcsInBzIjoiIFhYLVZNRVNTLTM2IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5IjpmYWxzZSwic25pIjoiYmFpZHUuY29tIn0",
         "country_from_pre": "XX",
         "type": "vmess",
         "parsed": {
@@ -37,7 +37,7 @@
             "net": "ws",
             "path": "\/oooo",
             "port": 30807,
-            "ps": " XX-VMESS-34",
+            "ps": " XX-VMESS-36",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -49,7 +49,7 @@
         "flag": "🏳️",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " XX-VMESS-34"
+        "new_name": " XX-VMESS-36"
     },
     {
         "input_value": "vmess:\/\/eyJhZGQiOiI2MS4xMTEuMjQ0LjUxIiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJmZmY2MGYwMC1kOWM4LTRmZjctOTU2NC1kNDQ3MjA5NzQ3M2IiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjYxMTU1LCJwcyI6IiBYWC1WTUVTUy0zNyIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
