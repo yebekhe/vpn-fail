@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNjEuMjQ4LjMwLjMiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEwMDZhOTI4LTIwMjEtNGEzYi1iZWI1LWQ1ODUzYzYyODFjNSIsIm5ldCI6IndzIiwicGF0aCI6IlwvIiwicG9ydCI6MjAwODYsInBzIjoiIEFVLVZNRVNTLTI2IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNjEuMjQ4LjMwLjMiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEwMDZhOTI4LTIwMjEtNGEzYi1iZWI1LWQ1ODUzYzYyODFjNSIsIm5ldCI6IndzIiwicGF0aCI6IlwvIiwicG9ydCI6MjAwODYsInBzIjoiIEFVLVZNRVNTLTciLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/",
             "port": 20086,
-            "ps": " AU-VMESS-26",
+            "ps": " AU-VMESS-7",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,10 +23,10 @@
         "flag": "🇦🇺",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " AU-VMESS-26"
+        "new_name": " AU-VMESS-7"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4xNDAuMjMiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImZkZTczZGFmLWNjNjctNDJmMy05OTM1LTM1YjEzMmIwMWFiZCIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NTQ4MDksInBzIjoiIEFVLVZNRVNTLTQxIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4xNDAuMjMiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6ImZkZTczZGFmLWNjNjctNDJmMy05OTM1LTM1YjEzMmIwMWFiZCIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NTQ4MDksInBzIjoiIEFVLVZNRVNTLTIwIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
@@ -37,7 +37,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 54809,
-            "ps": " AU-VMESS-41",
+            "ps": " AU-VMESS-20",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -49,6 +49,6 @@
         "flag": "🇦🇺",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " AU-VMESS-41"
+        "new_name": " AU-VMESS-20"
     }
 ]
