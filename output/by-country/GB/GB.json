@@ -54,33 +54,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " GB-VMESS-45"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiJmYS5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6ImZhLmZ4bGNuLmNvbSIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIzNyIsInBzIjoiIEdCLVZNRVNTLTU2Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ",
-        "country_from_pre": "GB",
-        "type": "vmess",
-        "parsed": {
-            "add": "fa.fxlcn.com",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "fa.fxlcn.com",
-            "id": "469e0b31-30c3-4dab-800d-711232634ce1",
-            "net": "tcp",
-            "path": "",
-            "port": "45237",
-            "ps": " GB-VMESS-56",
-            "scy": "auto",
-            "sni": "",
-            "tls": "",
-            "type": "none",
-            "v": "2"
-        },
-        "is_encrypted": false,
-        "country_code": "GB",
-        "flag": "🇬🇧",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " GB-VMESS-56"
     }
 ]
