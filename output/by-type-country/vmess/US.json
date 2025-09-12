@@ -503,31 +503,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " US-VMESS-41"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDUuMTk4LjEyNS4xNjAiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjMwYTViYTM3LWNmYmQtNGIyNy1kMjY2LWI1MjU2MmNmYmM0NCIsIm5ldCI6IndzIiwicGF0aCI6IlwvZWRub3ZhcyIsInBvcnQiOjEwOTAxLCJwcyI6IiBVUy1WTUVTUy00NCIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-        "country_from_pre": "US",
-        "type": "vmess",
-        "parsed": {
-            "add": "205.198.125.160",
-            "aid": 0,
-            "host": "",
-            "id": "30a5ba37-cfbd-4b27-d266-b52562cfbc44",
-            "net": "ws",
-            "path": "\/ednovas",
-            "port": 10901,
-            "ps": " US-VMESS-44",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "US",
-        "flag": "🇺🇸",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " US-VMESS-44"
     }
 ]
