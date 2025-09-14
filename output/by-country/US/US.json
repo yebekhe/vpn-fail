@@ -451,31 +451,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " US-VMESS-36"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ny44My4xOTIuMjE2IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI0OWJiMWJhYy0yMjZlLTQzNGUtOTg1Yi1lNWZkMWFjNmM0OGIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjM2MTk5LCJwcyI6IiBVUy1WTUVTUy0zOSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-        "country_from_pre": "US",
-        "type": "vmess",
-        "parsed": {
-            "add": "47.83.192.216",
-            "aid": 0,
-            "host": "",
-            "id": "49bb1bac-226e-434e-985b-e5fd1ac6c48b",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 36199,
-            "ps": " US-VMESS-39",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "US",
-        "flag": "🇺🇸",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " US-VMESS-39"
     }
 ]
