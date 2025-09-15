@@ -4,28 +4,28 @@
         "vmess": 42
     },
     "by_country": {
-        "XX": 1,
+        "US": 19,
         "NL": 11,
         "CA": 4,
-        "SG": 2,
-        "US": 19,
-        "GB": 1,
+        "XX": 1,
         "AU": 2,
+        "GB": 1,
         "TW": 1,
+        "SG": 2,
         "DE": 1
     },
     "by_type_and_country": {
         "vmess": {
-            "XX": 1,
+            "US": 19,
             "NL": 11,
             "CA": 4,
-            "SG": 2,
-            "US": 19,
-            "GB": 1,
+            "XX": 1,
             "AU": 2,
+            "GB": 1,
             "TW": 1,
+            "SG": 2,
             "DE": 1
         }
     },
-    "generated_at": "2025-09-15T11:11:18+00:00"
+    "generated_at": "2025-09-15T12:27:00+00:00"
 }
