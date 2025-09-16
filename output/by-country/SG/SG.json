@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE5MiIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwibmV0Ijoid3MiLCJwYXRoIjoicGF0aFwvMTcwNzMzMTMyMjMzIiwicG9ydCI6NDQzLCJwcyI6IiBTRy1WTUVTUy04IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE5MiIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwibmV0Ijoid3MiLCJwYXRoIjoicGF0aFwvMTcwNzMzMTMyMjMzIiwicG9ydCI6NDQzLCJwcyI6IiBTRy1WTUVTUy0xIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "SG",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "path\/170733132233",
             "port": 443,
-            "ps": " SG-VMESS-8",
+            "ps": " SG-VMESS-1",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -23,10 +23,10 @@
         "flag": "🇸🇬",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " SG-VMESS-8"
+        "new_name": " SG-VMESS-1"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE4OCIsImFpZCI6NjQsImhvc3QiOiJ3d3cuMzIyNzgxMTcueHl6IiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3BhdGhcLzE3MDczMzEzMjIzMyIsInBvcnQiOjQ0MywicHMiOiIgU0ctVk1FU1MtMjUiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE4OCIsImFpZCI6NjQsImhvc3QiOiJ3d3cuMzIyNzgxMTcueHl6IiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3BhdGhcLzE3MDczMzEzMjIzMyIsInBvcnQiOjQ0MywicHMiOiIgU0ctVk1FU1MtMTUiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "SG",
         "type": "vmess",
         "parsed": {
@@ -37,7 +37,7 @@
             "net": "ws",
             "path": "\/path\/170733132233",
             "port": 443,
-            "ps": " SG-VMESS-25",
+            "ps": " SG-VMESS-15",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -49,6 +49,6 @@
         "flag": "🇸🇬",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " SG-VMESS-25"
+        "new_name": " SG-VMESS-15"
     }
 ]
