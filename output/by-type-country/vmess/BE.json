@@ -1,0 +1,30 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI1Ny4xMjkuMjguNjQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6InNlcmthdC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgQkUtVk1FU1MtMTkiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
+        "country_from_pre": "BE",
+        "type": "vmess",
+        "parsed": {
+            "add": "57.129.28.64",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "serkat.org",
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "net": "ws",
+            "path": "linkvws",
+            "port": "443",
+            "ps": " BE-VMESS-19",
+            "scy": "auto",
+            "sni": "serkat.org",
+            "tls": "tls",
+            "type": "---",
+            "v": "2"
+        },
+        "is_encrypted": true,
+        "country_code": "BE",
+        "flag": "🇧🇪",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " BE-VMESS-19"
+    }
+]
