@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xNDEuMTM5LjEwOSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNjc1MmUyYzQtZmY3Yy00ZGE1LWE4MTUtYzMwN2JmODNhYjQ4IiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjoxMzMxMSwicHMiOiIgRUUtVk1FU1MtNTciLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xNDEuMTM5LjEwOSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNjc1MmUyYzQtZmY3Yy00ZGE1LWE4MTUtYzMwN2JmODNhYjQ4IiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjoxMzMxMSwicHMiOiIgRUUtVk1FU1MtNDciLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "EE",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 13311,
-            "ps": " EE-VMESS-57",
+            "ps": " EE-VMESS-47",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,6 +23,6 @@
         "flag": "🇪🇪",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " EE-VMESS-57"
+        "new_name": " EE-VMESS-47"
     }
 ]
