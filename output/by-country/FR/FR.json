@@ -1,0 +1,30 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiY2hyb21lIiwiaG9zdCI6InNlcmthdC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgRlItVk1FU1MtNCIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJrYXQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
+        "country_from_pre": "FR",
+        "type": "vmess",
+        "parsed": {
+            "add": "91.134.8.102",
+            "aid": "0",
+            "alpn": "",
+            "fp": "chrome",
+            "host": "serkat.org",
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "net": "ws",
+            "path": "linkvws",
+            "port": "443",
+            "ps": " FR-VMESS-4",
+            "scy": "auto",
+            "sni": "serkat.org",
+            "tls": "tls",
+            "type": "---",
+            "v": "2"
+        },
+        "is_encrypted": true,
+        "country_code": "FR",
+        "flag": "🇫🇷",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " FR-VMESS-4"
+    }
+]
