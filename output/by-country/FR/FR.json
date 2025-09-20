@@ -1,34 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC45MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoiIEZSLVZNRVNTLTQxIiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9",
-        "country_from_pre": "FR",
-        "type": "vmess",
-        "parsed": {
-            "add": "91.134.8.92",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "yichueng.org",
-            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "net": "ws",
-            "path": "linkvws",
-            "port": "443",
-            "ps": " FR-VMESS-41",
-            "scy": "auto",
-            "sni": "yichueng.org",
-            "tls": "tls",
-            "type": "",
-            "v": "2"
-        },
-        "is_encrypted": true,
-        "country_code": "FR",
-        "flag": "🇫🇷",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " FR-VMESS-41"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiY2hyb21lIiwiaG9zdCI6InNlcmthdC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgRlItVk1FU1MtNjAiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiY2hyb21lIiwiaG9zdCI6InNlcmthdC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgRlItVk1FU1MtMiIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJrYXQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
         "country_from_pre": "FR",
         "type": "vmess",
         "parsed": {
@@ -41,7 +13,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": "443",
-            "ps": " FR-VMESS-60",
+            "ps": " FR-VMESS-2",
             "scy": "auto",
             "sni": "serkat.org",
             "tls": "tls",
@@ -53,6 +25,34 @@
         "flag": "🇫🇷",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " FR-VMESS-60"
+        "new_name": " FR-VMESS-2"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC45MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoiIEZSLVZNRVNTLTUiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0",
+        "country_from_pre": "FR",
+        "type": "vmess",
+        "parsed": {
+            "add": "91.134.8.92",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "yichueng.org",
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "net": "ws",
+            "path": "linkvws",
+            "port": "443",
+            "ps": " FR-VMESS-5",
+            "scy": "auto",
+            "sni": "yichueng.org",
+            "tls": "tls",
+            "type": "",
+            "v": "2"
+        },
+        "is_encrypted": true,
+        "country_code": "FR",
+        "flag": "🇫🇷",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " FR-VMESS-5"
     }
 ]
