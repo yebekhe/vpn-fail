@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ni4yNTAuMjQzLjU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImE3NWYzZjk1LWFkNGUtNDQ5OC1mYzcyLWRkNzQwZGQwMmJmYyIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTAzOTQiLCJwcyI6IiBHQi1WTUVTUy0yNiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0Ni4yNTAuMjQzLjU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImE3NWYzZjk1LWFkNGUtNDQ5OC1mYzcyLWRkNzQwZGQwMmJmYyIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTAzOTQiLCJwcyI6IiBHQi1WTUVTUy0xNyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
@@ -13,7 +13,7 @@
             "net": "tcp",
             "path": "",
             "port": "50394",
-            "ps": " GB-VMESS-26",
+            "ps": " GB-VMESS-17",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -25,6 +25,6 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-26"
+        "new_name": " GB-VMESS-17"
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiY2hyb21lIiwiaG9zdCI6InNlcmthdC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgRlItVk1FU1MtMjkiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiY2hyb21lIiwiaG9zdCI6InNlcmthdC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgRlItVk1FU1MtMjEiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
         "country_from_pre": "FR",
         "type": "vmess",
         "parsed": {
@@ -13,7 +13,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": "443",
-            "ps": " FR-VMESS-29",
+            "ps": " FR-VMESS-21",
             "scy": "auto",
             "sni": "serkat.org",
             "tls": "tls",
@@ -25,6 +25,6 @@
         "flag": "🇫🇷",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " FR-VMESS-29"
+        "new_name": " FR-VMESS-21"
     }
 ]
