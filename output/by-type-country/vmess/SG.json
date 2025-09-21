@@ -1,32 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE4OCIsImFpZCI6NjQsImhvc3QiOiJ3d3cuMzIyNzgxMTcueHl6IiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3BhdGhcLzE3MDczMzEzMjIzMyIsInBvcnQiOjQ0MywicHMiOiIgU0ctVk1FU1MtNyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-        "country_from_pre": "SG",
-        "type": "vmess",
-        "parsed": {
-            "add": "202.79.161.188",
-            "aid": 64,
-            "host": "www.32278117.xyz",
-            "id": "418048af-a293-4b99-9b0c-98ca3580dd24",
-            "net": "ws",
-            "path": "\/path\/170733132233",
-            "port": 443,
-            "ps": " SG-VMESS-7",
-            "tls": "tls",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "SG",
-        "flag": "🇸🇬",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " SG-VMESS-7"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE5MiIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwibmV0Ijoid3MiLCJwYXRoIjoicGF0aFwvMTcwNzMzMTMyMjMzIiwicG9ydCI6NDQzLCJwcyI6IiBTRy1WTUVTUy0xMyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE5MiIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwibmV0Ijoid3MiLCJwYXRoIjoicGF0aFwvMTcwNzMzMTMyMjMzIiwicG9ydCI6NDQzLCJwcyI6IiBTRy1WTUVTUy00NyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "SG",
         "type": "vmess",
         "parsed": {
@@ -37,7 +11,7 @@
             "net": "ws",
             "path": "path\/170733132233",
             "port": 443,
-            "ps": " SG-VMESS-13",
+            "ps": " SG-VMESS-47",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -49,6 +23,32 @@
         "flag": "🇸🇬",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " SG-VMESS-13"
+        "new_name": " SG-VMESS-47"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIyMDIuNzkuMTYxLjE4OCIsImFpZCI6NjQsImhvc3QiOiJ3d3cuMzIyNzgxMTcueHl6IiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3BhdGhcLzE3MDczMzEzMjIzMyIsInBvcnQiOjQ0MywicHMiOiIgU0ctVk1FU1MtNTQiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "country_from_pre": "SG",
+        "type": "vmess",
+        "parsed": {
+            "add": "202.79.161.188",
+            "aid": 64,
+            "host": "www.32278117.xyz",
+            "id": "418048af-a293-4b99-9b0c-98ca3580dd24",
+            "net": "ws",
+            "path": "\/path\/170733132233",
+            "port": 443,
+            "ps": " SG-VMESS-54",
+            "tls": "tls",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "SG",
+        "flag": "🇸🇬",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " SG-VMESS-54"
     }
 ]
