@@ -1,23 +1,23 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI1Ny4xMjguMTg5LjE0MyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoibGFtbWFsYW5kLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBCRS1WTUVTUy0xOSIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiI1Ny4xMjkuMjguMjE0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBCRS1WTUVTUy0zNyIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9",
         "country_from_pre": "BE",
         "type": "vmess",
         "parsed": {
-            "add": "57.128.189.143",
+            "add": "57.129.28.214",
             "aid": "0",
             "alpn": "",
             "fp": "",
-            "host": "lammaland.org",
+            "host": "kampong.org",
             "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "net": "ws",
             "path": "linkvws",
             "port": "443",
-            "ps": " BE-VMESS-19",
+            "ps": " BE-VMESS-37",
             "scy": "auto",
-            "sni": "lammaland.org",
+            "sni": "kampong.org",
             "tls": "tls",
-            "type": "---",
+            "type": "",
             "v": "2"
         },
         "is_encrypted": true,
@@ -25,6 +25,6 @@
         "flag": "🇧🇪",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " BE-VMESS-19"
+        "new_name": " BE-VMESS-37"
     }
 ]
