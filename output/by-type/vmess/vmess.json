@@ -1950,57 +1950,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " US-VMESS-73"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ny4yMzkuMjMzLjEwMSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiOGU2M2JmNWItMWVjYi00OWM5LWE1M2EtNWU5ZjZkMGY3ZDM5IiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjoxMTYxNCwicHMiOiIgVVMtVk1FU1MtNzQiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
-        "country_from_pre": "US",
-        "type": "vmess",
-        "parsed": {
-            "add": "47.239.233.101",
-            "aid": 0,
-            "host": "",
-            "id": "8e63bf5b-1ecb-49c9-a53a-5e9f6d0f7d39",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 11614,
-            "ps": " US-VMESS-74",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "US",
-        "flag": "🇺🇸",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " US-VMESS-74"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ny4yMzkuMjMzLjEwMSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiOGU2M2JmNWItMWVjYi00OWM5LWE1M2EtNWU5ZjZkMGY3ZDM5IiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjoxMTYxNCwicHMiOiIgVVMtVk1FU1MtNzUiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
-        "country_from_pre": "US",
-        "type": "vmess",
-        "parsed": {
-            "add": "47.239.233.101",
-            "aid": 0,
-            "host": "",
-            "id": "8e63bf5b-1ecb-49c9-a53a-5e9f6d0f7d39",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 11614,
-            "ps": " US-VMESS-75",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "US",
-        "flag": "🇺🇸",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " US-VMESS-75"
     }
 ]
