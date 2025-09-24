@@ -1,0 +1,28 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIxMTYuMjA2LjkzLjE2NSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiYmI4OTIwNzgtOThlZi00MzIxLWVkZjQtNGM0MDhlZGQ1YWUyIiwibmV0Ijoid3MiLCJwYXRoIjoiXC8iLCJwb3J0IjozOTk3NSwicHMiOiIgQ04tVk1FU1MtNyIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "country_from_pre": "CN",
+        "type": "vmess",
+        "parsed": {
+            "add": "116.206.93.165",
+            "aid": 0,
+            "host": "",
+            "id": "bb892078-98ef-4321-edf4-4c408edd5ae2",
+            "net": "ws",
+            "path": "\/",
+            "port": 39975,
+            "ps": " CN-VMESS-7",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "CN",
+        "flag": "🇨🇳",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " CN-VMESS-7"
+    }
+]
