@@ -78,17 +78,17 @@
         "new_name": " AU-VMESS-32"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xODcuMTUiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjI1NmM3ZDRjLTYwOTYtNDBiZC05ZjAxLWY3YTU3YWYxYjJkNiIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NTY5NTAsInBzIjoiIEFVLVZNRVNTLTQxIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xODcuMTUiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjMzODkzOGM2LTRhY2QtNDEzZS05NTljLWNhZTEzYjIxYjllNiIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzEyNTQsInBzIjoiIEFVLVZNRVNTLTQxIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
             "add": "8.217.187.15",
             "aid": 0,
             "host": "",
-            "id": "256c7d4c-6096-40bd-9f01-f7a57af1b2d6",
+            "id": "338938c6-4acd-413e-959c-cae13b21b9e6",
             "net": "ws",
             "path": "\/arki?ed=2048",
-            "port": 56950,
+            "port": 31254,
             "ps": " AU-VMESS-41",
             "tls": "",
             "type": "auto",
