@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNDguMTEzLjE3Ni4xOTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy00MCIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNDguMTEzLjE3Ni4xOTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy0yNSIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
@@ -13,7 +13,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": "443",
-            "ps": " CA-VMESS-40",
+            "ps": " CA-VMESS-25",
             "scy": "auto",
             "sni": "fapeng.org",
             "tls": "tls",
@@ -25,10 +25,10 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-40"
+        "new_name": " CA-VMESS-25"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy01MyIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy03NCIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
@@ -41,7 +41,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": "443",
-            "ps": " CA-VMESS-53",
+            "ps": " CA-VMESS-74",
             "scy": "auto",
             "sni": "kampong.org",
             "tls": "tls",
@@ -53,6 +53,6 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-53"
+        "new_name": " CA-VMESS-74"
     }
 ]
