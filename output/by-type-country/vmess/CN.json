@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxMTYuMjA2LjkzLjE2NSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiYmI4OTIwNzgtOThlZi00MzIxLWVkZjQtNGM0MDhlZGQ1YWUyIiwibmV0Ijoid3MiLCJwYXRoIjoiXC8iLCJwb3J0IjozOTk3NSwicHMiOiIgQ04tVk1FU1MtNDMiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxMTYuMjA2LjkzLjE2NSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiYmI4OTIwNzgtOThlZi00MzIxLWVkZjQtNGM0MDhlZGQ1YWUyIiwibmV0Ijoid3MiLCJwYXRoIjoiXC8iLCJwb3J0IjozOTk3NSwicHMiOiIgQ04tVk1FU1MtNDEiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "CN",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/",
             "port": 39975,
-            "ps": " CN-VMESS-43",
+            "ps": " CN-VMESS-41",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,6 +23,6 @@
         "flag": "🇨🇳",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CN-VMESS-43"
+        "new_name": " CN-VMESS-41"
     }
 ]
