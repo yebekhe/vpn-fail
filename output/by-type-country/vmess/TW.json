@@ -26,7 +26,7 @@
         "new_name": " TW-VMESS-4"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxMDMuMjI5LjEyNy4yMTIiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjkzZTQ2M2I2LWFmMmItNDM3Yi05MGY4LWRiYTE3MmE3MGQxMSIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzIzODEsInBzIjoiIFRXLVZNRVNTLTg4IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxMDMuMjI5LjEyNy4yMTIiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjkzZTQ2M2I2LWFmMmItNDM3Yi05MGY4LWRiYTE3MmE3MGQxMSIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzIzODEsInBzIjoiIFRXLVZNRVNTLTg5IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "TW",
         "type": "vmess",
         "parsed": {
@@ -37,7 +37,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 32381,
-            "ps": " TW-VMESS-88",
+            "ps": " TW-VMESS-89",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -49,6 +49,6 @@
         "flag": "🇹🇼",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " TW-VMESS-88"
+        "new_name": " TW-VMESS-89"
     }
 ]
