@@ -1,0 +1,28 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIzMS41OC44Ny45OSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiZDkwYmVmMTUtMTQwMy00ZTc5LTkyY2MtOTBmNmNjNjk3NjAzIiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjozNjk4OSwicHMiOiIgSVItVk1FU1MtODEiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "country_from_pre": "IR",
+        "type": "vmess",
+        "parsed": {
+            "add": "31.58.87.99",
+            "aid": 0,
+            "host": "",
+            "id": "d90bef15-1403-4e79-92cc-90f6cc697603",
+            "net": "ws",
+            "path": "\/arki?ed=2048",
+            "port": 36989,
+            "ps": " IR-VMESS-81",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "IR",
+        "flag": "🇮🇷",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " IR-VMESS-81"
+    }
+]

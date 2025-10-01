@@ -1,0 +1,28 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xOTIuOTguMjA1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIyYzM5NjI1YS03OGUxLTRmYjktOWU4OC1mMmM0NzUxMWQzODUiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjM4NzkyLCJwcyI6IiBaQS1WTUVTUy0yNyIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "country_from_pre": "ZA",
+        "type": "vmess",
+        "parsed": {
+            "add": "45.192.98.205",
+            "aid": 0,
+            "host": "",
+            "id": "2c39625a-78e1-4fb9-9e88-f2c47511d385",
+            "net": "ws",
+            "path": "\/arki?ed=2048",
+            "port": 38792,
+            "ps": " ZA-VMESS-27",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "ZA",
+        "flag": "🇿🇦",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " ZA-VMESS-27"
+    }
+]
