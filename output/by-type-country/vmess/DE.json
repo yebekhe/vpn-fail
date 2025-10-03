@@ -1,33 +1,5 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNDEuOTQuMTU1LjIyOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiIgREUtVk1FU1MtMjYiLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ",
-        "country_from_pre": "DE",
-        "type": "vmess",
-        "parsed": {
-            "add": "141.94.155.228",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "kampong.org",
-            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "net": "ws",
-            "path": "linkvws",
-            "port": "443",
-            "ps": " DE-VMESS-26",
-            "scy": "auto",
-            "sni": "kampong.org",
-            "tls": "tls",
-            "type": "",
-            "v": "2"
-        },
-        "is_encrypted": true,
-        "country_code": "DE",
-        "flag": "🇩🇪",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " DE-VMESS-26"
-    },
-    {
         "input_value": "vmess:\/\/eyJhZGQiOiIxNDEuOTUuMTI2LjEzNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiamFtZWtrLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBERS1WTUVTUy04MyIsInNjeSI6ImF1dG8iLCJzbmkiOiJqYW1la2sub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
         "country_from_pre": "DE",
         "type": "vmess",
@@ -54,33 +26,5 @@
         "is_cloudflare": false,
         "valid": true,
         "new_name": " DE-VMESS-83"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNDEuOTQuMTU1LjIyNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBERS1WTUVTUy05NyIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
-        "country_from_pre": "DE",
-        "type": "vmess",
-        "parsed": {
-            "add": "141.94.155.224",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "fapeng.org",
-            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-            "net": "ws",
-            "path": "linkvws",
-            "port": "443",
-            "ps": " DE-VMESS-97",
-            "scy": "auto",
-            "sni": "fapeng.org",
-            "tls": "tls",
-            "type": "---",
-            "v": "2"
-        },
-        "is_encrypted": true,
-        "country_code": "DE",
-        "flag": "🇩🇪",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " DE-VMESS-97"
     }
 ]
