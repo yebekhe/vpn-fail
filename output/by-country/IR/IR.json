@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIzMS41OC44Ny45OSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiZDkwYmVmMTUtMTQwMy00ZTc5LTkyY2MtOTBmNmNjNjk3NjAzIiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjozNjk4OSwicHMiOiIgSVItVk1FU1MtNjUiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIzMS41OC44Ny45OSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiZDkwYmVmMTUtMTQwMy00ZTc5LTkyY2MtOTBmNmNjNjk3NjAzIiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjozNjk4OSwicHMiOiIgSVItVk1FU1MtODAiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "IR",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 36989,
-            "ps": " IR-VMESS-65",
+            "ps": " IR-VMESS-80",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,6 +23,6 @@
         "flag": "🇮🇷",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " IR-VMESS-65"
+        "new_name": " IR-VMESS-80"
     }
 ]
