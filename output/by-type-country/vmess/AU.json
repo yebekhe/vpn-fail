@@ -1,32 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4yMjAuMzAiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyZjcxNjRiLWUzZTEtNDI2NC04NmNjLTY4MDI4OTAyY2QxOSIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzExMjMsInBzIjoiIEFVLVZNRVNTLTEiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
-        "country_from_pre": "AU",
-        "type": "vmess",
-        "parsed": {
-            "add": "8.217.220.30",
-            "aid": 0,
-            "host": "",
-            "id": "12f7164b-e3e1-4264-86cc-68028902cd19",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 31123,
-            "ps": " AU-VMESS-1",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "AU",
-        "flag": "🇦🇺",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " AU-VMESS-1"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxOC44Ljg0IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4NzFkMDRkZi1mYzU4LTQ3MGEtYmFjYS1kYWFlMjg4NjkxNjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjIzMzI2LCJwcyI6IiBBVS1WTUVTUy0yIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxOC44Ljg0IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4NzFkMDRkZi1mYzU4LTQ3MGEtYmFjYS1kYWFlMjg4NjkxNjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjIzMzI2LCJwcyI6IiBBVS1WTUVTUy0yOSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
@@ -37,7 +11,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 23326,
-            "ps": " AU-VMESS-2",
+            "ps": " AU-VMESS-29",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -49,114 +23,10 @@
         "flag": "🇦🇺",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " AU-VMESS-2"
+        "new_name": " AU-VMESS-29"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIyMC4xODguMjM4IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4MWI1N2M4NC02OThmLTQ5NDQtOTI2OC1kYjZhMDZhNGE2M2EiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjMzMjQ4LCJwcyI6IiBBVS1WTUVTUy0zIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
-        "country_from_pre": "AU",
-        "type": "vmess",
-        "parsed": {
-            "add": "8.220.188.238",
-            "aid": 0,
-            "host": "",
-            "id": "81b57c84-698f-4944-9268-db6a06a4a63a",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 33248,
-            "ps": " AU-VMESS-3",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "AU",
-        "flag": "🇦🇺",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " AU-VMESS-3"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xODcuMTUiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjMzODkzOGM2LTRhY2QtNDEzZS05NTljLWNhZTEzYjIxYjllNiIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzEyNTQsInBzIjoiIEFVLVZNRVNTLTM4IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
-        "country_from_pre": "AU",
-        "type": "vmess",
-        "parsed": {
-            "add": "8.217.187.15",
-            "aid": 0,
-            "host": "",
-            "id": "338938c6-4acd-413e-959c-cae13b21b9e6",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 31254,
-            "ps": " AU-VMESS-38",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "AU",
-        "flag": "🇦🇺",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " AU-VMESS-38"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xODcuMTUiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjMzODkzOGM2LTRhY2QtNDEzZS05NTljLWNhZTEzYjIxYjllNiIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzEyNTQsInBzIjoiIEFVLVZNRVNTLTQzIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
-        "country_from_pre": "AU",
-        "type": "vmess",
-        "parsed": {
-            "add": "8.217.187.15",
-            "aid": 0,
-            "host": "",
-            "id": "338938c6-4acd-413e-959c-cae13b21b9e6",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 31254,
-            "ps": " AU-VMESS-43",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "AU",
-        "flag": "🇦🇺",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " AU-VMESS-43"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMzAuMTc5IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4YjBjMTFiZS0xZmZlLTQwNzQtYWZjNS1lNzM0ZmU5ODViMjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjEyMTI1LCJwcyI6IiBBVS1WTUVTUy01OSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-        "country_from_pre": "AU",
-        "type": "vmess",
-        "parsed": {
-            "add": "8.210.230.179",
-            "aid": 0,
-            "host": "",
-            "id": "8b0c11be-1ffe-4074-afc5-e734fe985b22",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 12125,
-            "ps": " AU-VMESS-59",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "AU",
-        "flag": "🇦🇺",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " AU-VMESS-59"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxOC44Ljg0IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4NzFkMDRkZi1mYzU4LTQ3MGEtYmFjYS1kYWFlMjg4NjkxNjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjIzMzI2LCJwcyI6IiBBVS1WTUVTUy02NCIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxOC44Ljg0IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4NzFkMDRkZi1mYzU4LTQ3MGEtYmFjYS1kYWFlMjg4NjkxNjQiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjIzMzI2LCJwcyI6IiBBVS1WTUVTUy0zNCIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
@@ -167,7 +37,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 23326,
-            "ps": " AU-VMESS-64",
+            "ps": " AU-VMESS-34",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -179,10 +49,36 @@
         "flag": "🇦🇺",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " AU-VMESS-64"
+        "new_name": " AU-VMESS-34"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4yMjAuMzAiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyZjcxNjRiLWUzZTEtNDI2NC04NmNjLTY4MDI4OTAyY2QxOSIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzExMjMsInBzIjoiIEFVLVZNRVNTLTc4IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xODcuMTUiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjMzODkzOGM2LTRhY2QtNDEzZS05NTljLWNhZTEzYjIxYjllNiIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzEyNTQsInBzIjoiIEFVLVZNRVNTLTQwIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "country_from_pre": "AU",
+        "type": "vmess",
+        "parsed": {
+            "add": "8.217.187.15",
+            "aid": 0,
+            "host": "",
+            "id": "338938c6-4acd-413e-959c-cae13b21b9e6",
+            "net": "ws",
+            "path": "\/arki?ed=2048",
+            "port": 31254,
+            "ps": " AU-VMESS-40",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "AU",
+        "flag": "🇦🇺",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " AU-VMESS-40"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4yMjAuMzAiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjEyZjcxNjRiLWUzZTEtNDI2NC04NmNjLTY4MDI4OTAyY2QxOSIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzExMjMsInBzIjoiIEFVLVZNRVNTLTYyIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
@@ -193,7 +89,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 31123,
-            "ps": " AU-VMESS-78",
+            "ps": " AU-VMESS-62",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -205,10 +101,10 @@
         "flag": "🇦🇺",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " AU-VMESS-78"
+        "new_name": " AU-VMESS-62"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMzAuMTc5IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4YjBjMTFiZS0xZmZlLTQwNzQtYWZjNS1lNzM0ZmU5ODViMjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjEyMTI1LCJwcyI6IiBBVS1WTUVTUy04NCIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMzAuMTc5IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4YjBjMTFiZS0xZmZlLTQwNzQtYWZjNS1lNzM0ZmU5ODViMjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjEyMTI1LCJwcyI6IiBBVS1WTUVTUy04MSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "AU",
         "type": "vmess",
         "parsed": {
@@ -219,7 +115,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 12125,
-            "ps": " AU-VMESS-84",
+            "ps": " AU-VMESS-81",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -231,6 +127,58 @@
         "flag": "🇦🇺",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " AU-VMESS-84"
+        "new_name": " AU-VMESS-81"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xODcuMTUiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjMzODkzOGM2LTRhY2QtNDEzZS05NTljLWNhZTEzYjIxYjllNiIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6MzEyNTQsInBzIjoiIEFVLVZNRVNTLTgyIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "country_from_pre": "AU",
+        "type": "vmess",
+        "parsed": {
+            "add": "8.217.187.15",
+            "aid": 0,
+            "host": "",
+            "id": "338938c6-4acd-413e-959c-cae13b21b9e6",
+            "net": "ws",
+            "path": "\/arki?ed=2048",
+            "port": 31254,
+            "ps": " AU-VMESS-82",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "AU",
+        "flag": "🇦🇺",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " AU-VMESS-82"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMzAuMTc5IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI4YjBjMTFiZS0xZmZlLTQwNzQtYWZjNS1lNzM0ZmU5ODViMjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjEyMTI1LCJwcyI6IiBBVS1WTUVTUy05NiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "country_from_pre": "AU",
+        "type": "vmess",
+        "parsed": {
+            "add": "8.210.230.179",
+            "aid": 0,
+            "host": "",
+            "id": "8b0c11be-1ffe-4074-afc5-e734fe985b22",
+            "net": "ws",
+            "path": "\/arki?ed=2048",
+            "port": 12125,
+            "ps": " AU-VMESS-96",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "AU",
+        "flag": "🇦🇺",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " AU-VMESS-96"
     }
 ]
