@@ -1,6 +1,34 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ni4yNTAuMjQzLjU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImE3NWYzZjk1LWFkNGUtNDQ5OC1mYzcyLWRkNzQwZGQwMmJmYyIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTAzOTQiLCJwcyI6IiBHQi1WTUVTUy0xNyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiJmYS5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6ImZhLmZ4bGNuLmNvbSIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIzNyIsInBzIjoiIEdCLVZNRVNTLTQxIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ",
+        "country_from_pre": "GB",
+        "type": "vmess",
+        "parsed": {
+            "add": "fa.fxlcn.com",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "fa.fxlcn.com",
+            "id": "469e0b31-30c3-4dab-800d-711232634ce1",
+            "net": "tcp",
+            "path": "",
+            "port": "45237",
+            "ps": " GB-VMESS-41",
+            "scy": "auto",
+            "sni": "",
+            "tls": "",
+            "type": "none",
+            "v": "2"
+        },
+        "is_encrypted": false,
+        "country_code": "GB",
+        "flag": "🇬🇧",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " GB-VMESS-41"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI0Ni4yNTAuMjQzLjU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImE3NWYzZjk1LWFkNGUtNDQ5OC1mYzcyLWRkNzQwZGQwMmJmYyIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTAzOTQiLCJwcyI6IiBHQi1WTUVTUy05NiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
@@ -13,7 +41,7 @@
             "net": "tcp",
             "path": "",
             "port": "50394",
-            "ps": " GB-VMESS-17",
+            "ps": " GB-VMESS-96",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -25,6 +53,6 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-17"
+        "new_name": " GB-VMESS-96"
     }
 ]
