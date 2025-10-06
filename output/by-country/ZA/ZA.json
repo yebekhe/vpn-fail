@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xOTIuOTguMjA1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJiZWQwODNmOC1hNGRmLTQyOTMtYTQ2ZC1mMTU4YTI3YjVkNWMiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjMxMDg0LCJwcyI6IiBaQS1WTUVTUy0xMSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xOTIuOTguMjA1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJiZWQwODNmOC1hNGRmLTQyOTMtYTQ2ZC1mMTU4YTI3YjVkNWMiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjMxMDg0LCJwcyI6IiBaQS1WTUVTUy01OSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "ZA",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 31084,
-            "ps": " ZA-VMESS-11",
+            "ps": " ZA-VMESS-59",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,10 +23,10 @@
         "flag": "🇿🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " ZA-VMESS-11"
+        "new_name": " ZA-VMESS-59"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xOTIuOTguMjA1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJiZWQwODNmOC1hNGRmLTQyOTMtYTQ2ZC1mMTU4YTI3YjVkNWMiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjMxMDg0LCJwcyI6IiBaQS1WTUVTUy01NCIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xOTIuOTguMjA1IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJiZWQwODNmOC1hNGRmLTQyOTMtYTQ2ZC1mMTU4YTI3YjVkNWMiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjMxMDg0LCJwcyI6IiBaQS1WTUVTUy04OSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "ZA",
         "type": "vmess",
         "parsed": {
@@ -37,7 +37,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 31084,
-            "ps": " ZA-VMESS-54",
+            "ps": " ZA-VMESS-89",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -49,6 +49,6 @@
         "flag": "🇿🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " ZA-VMESS-54"
+        "new_name": " ZA-VMESS-89"
     }
 ]
