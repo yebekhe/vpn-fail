@@ -70,10 +70,10 @@
         "country_text": "Singapore",
         "time_value": 1761768652,
         "input_value": "vmess:\/\/ewogICAgImFkZCI6ICI4LjIxOC4xNzUuNjQiLAogICAgImFpZCI6IDAsCiAgICAiaG9zdCI6ICIiLAogICAgImlkIjogIjQ1YmZjYWFhLWYzZGItNGU5My04MTY0LTQyMDNlYWEyYTJjYyIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi9hcmtpP2VkPTIwNDgiLAogICAgInBvcnQiOiA1MTM3NywKICAgICJwcyI6ICLwn4et8J+HsEhLLTguMjE4LjE3NS42NC01Njc4IiwKICAgICJ0bHMiOiAiIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiB0cnVlLAogICAgInNuaSI6ICIiCn0=",
-        "country_from_pre": "SG",
+        "country_from_pre": "AU",
         "enriched_data": {
-            "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxOC4xNzUuNjQiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjQ1YmZjYWFhLWYzZGItNGU5My04MTY0LTQyMDNlYWEyYTJjYyIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NTEzNzcsInBzIjoiIFNHLVZNRVNTLTMiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
-            "country_from_pre": "SG",
+            "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxOC4xNzUuNjQiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjQ1YmZjYWFhLWYzZGItNGU5My04MTY0LTQyMDNlYWEyYTJjYyIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NTEzNzcsInBzIjoiIEFVLVZNRVNTLTMiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+            "country_from_pre": "AU",
             "type": "vmess",
             "parsed": {
                 "add": "8.218.175.64",
@@ -83,7 +83,7 @@
                 "net": "ws",
                 "path": "\/arki?ed=2048",
                 "port": 51377,
-                "ps": " SG-VMESS-3",
+                "ps": " AU-VMESS-3",
                 "tls": "",
                 "type": "auto",
                 "security": "auto",
@@ -91,11 +91,11 @@
                 "sni": ""
             },
             "is_encrypted": false,
-            "country_code": "SG",
-            "flag": "🇸🇬",
+            "country_code": "AU",
+            "flag": "🇦🇺",
             "is_cloudflare": false,
             "valid": true,
-            "new_name": " SG-VMESS-3"
+            "new_name": " AU-VMESS-3"
         }
     },
     {
@@ -540,10 +540,10 @@
         "country_text": "Singapore",
         "time_value": 1761768017,
         "input_value": "vmess:\/\/ewogICAgImFkZCI6ICI4LjIxMC4yMTIuMTk2IiwKICAgICJhaWQiOiAwLAogICAgImhvc3QiOiAiIiwKICAgICJpZCI6ICJmYjlmYzA0My0yYzcwLTQyZWItODhjMC02NjgwNGNhMzMwNjIiLAogICAgIm5ldCI6ICJ3cyIsCiAgICAicGF0aCI6ICIvYXJraT9lZD0yMDQ4IiwKICAgICJwb3J0IjogMzQzNDgsCiAgICAicHMiOiAi8J+HrfCfh7BISy04LjIxMC4yMTIuMTk2LTU2MzMiLAogICAgInRscyI6ICIiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==",
-        "country_from_pre": "SG",
+        "country_from_pre": "AU",
         "enriched_data": {
-            "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMTIuMTk2IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJmYjlmYzA0My0yYzcwLTQyZWItODhjMC02NjgwNGNhMzMwNjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjM0MzQ4LCJwcyI6IiBTRy1WTUVTUy0xNyIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-            "country_from_pre": "SG",
+            "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMTIuMTk2IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJmYjlmYzA0My0yYzcwLTQyZWItODhjMC02NjgwNGNhMzMwNjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjM0MzQ4LCJwcyI6IiBBVS1WTUVTUy0xNyIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+            "country_from_pre": "AU",
             "type": "vmess",
             "parsed": {
                 "add": "8.210.212.196",
@@ -553,7 +553,7 @@
                 "net": "ws",
                 "path": "\/arki?ed=2048",
                 "port": 34348,
-                "ps": " SG-VMESS-17",
+                "ps": " AU-VMESS-17",
                 "tls": "",
                 "type": "auto",
                 "security": "auto",
@@ -561,11 +561,11 @@
                 "sni": ""
             },
             "is_encrypted": false,
-            "country_code": "SG",
-            "flag": "🇸🇬",
+            "country_code": "AU",
+            "flag": "🇦🇺",
             "is_cloudflare": false,
             "valid": true,
-            "new_name": " SG-VMESS-17"
+            "new_name": " AU-VMESS-17"
         }
     },
     {
@@ -1288,10 +1288,10 @@
         "country_text": "Singapore",
         "time_value": 1761766363,
         "input_value": "vmess:\/\/ewogICAgImFkZCI6ICI4LjIxNy4xNTkuOTYiLAogICAgImFpZCI6IDAsCiAgICAiaG9zdCI6ICIiLAogICAgImlkIjogIjIzZWEwYjc1LTIwNmItNGUzYi1iNjI0LWUwOTNkNTgwOGJmOCIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi9hcmtpP2VkPTIwNDgiLAogICAgInBvcnQiOiA0Nzg3MiwKICAgICJwcyI6ICLwn4et8J+HsEhLLTguMjE3LjE1OS45Ni01NzAyIiwKICAgICJ0bHMiOiAiIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiB0cnVlLAogICAgInNuaSI6ICIiCn0=",
-        "country_from_pre": "SG",
+        "country_from_pre": "AU",
         "enriched_data": {
-            "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xNTkuOTYiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjIzZWEwYjc1LTIwNmItNGUzYi1iNjI0LWUwOTNkNTgwOGJmOCIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NDc4NzIsInBzIjoiIFNHLVZNRVNTLTM5IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
-            "country_from_pre": "SG",
+            "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxNy4xNTkuOTYiLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjIzZWEwYjc1LTIwNmItNGUzYi1iNjI0LWUwOTNkNTgwOGJmOCIsIm5ldCI6IndzIiwicGF0aCI6IlwvYXJraT9lZD0yMDQ4IiwicG9ydCI6NDc4NzIsInBzIjoiIEFVLVZNRVNTLTM5IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+            "country_from_pre": "AU",
             "type": "vmess",
             "parsed": {
                 "add": "8.217.159.96",
@@ -1301,7 +1301,7 @@
                 "net": "ws",
                 "path": "\/arki?ed=2048",
                 "port": 47872,
-                "ps": " SG-VMESS-39",
+                "ps": " AU-VMESS-39",
                 "tls": "",
                 "type": "auto",
                 "security": "auto",
@@ -1309,11 +1309,11 @@
                 "sni": ""
             },
             "is_encrypted": false,
-            "country_code": "SG",
-            "flag": "🇸🇬",
+            "country_code": "AU",
+            "flag": "🇦🇺",
             "is_cloudflare": false,
             "valid": true,
-            "new_name": " SG-VMESS-39"
+            "new_name": " AU-VMESS-39"
         }
     },
     {
