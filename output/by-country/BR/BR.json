@@ -1,0 +1,28 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4yMzEuMTMyLjQ2IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIyM2JkZjZkZi1jNDgyLTQ2ZDAtYzBmNC01YTk4ZDUzNGVhMTEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL3Rlc3QiLCJwb3J0Ijo0NTk3OSwicHMiOiIgQlItVk1FU1MtMjgiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "country_from_pre": "BR",
+        "type": "vmess",
+        "parsed": {
+            "add": "45.231.132.46",
+            "aid": 0,
+            "host": "",
+            "id": "23bdf6df-c482-46d0-c0f4-5a98d534ea11",
+            "net": "ws",
+            "path": "\/test",
+            "port": 45979,
+            "ps": " BR-VMESS-28",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "BR",
+        "flag": "🇧🇷",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " BR-VMESS-28"
+    }
+]
