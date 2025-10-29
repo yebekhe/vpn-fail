@@ -234,6 +234,32 @@
         "new_name": " AU-VMESS-31"
     },
     {
+        "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4xMjIuMTM5IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIxNzEyMDc5ZC1mNTE2LTQxOWItYWRhZC1iYWJhZjMyODBlMzYiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjM0NDkxLCJwcyI6IiBBVS1WTUVTUy03MSIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "country_from_pre": "AU",
+        "type": "vmess",
+        "parsed": {
+            "add": "8.210.122.139",
+            "aid": 0,
+            "host": "",
+            "id": "1712079d-f516-419b-adad-babaf3280e36",
+            "net": "ws",
+            "path": "\/arki?ed=2048",
+            "port": 34491,
+            "ps": " AU-VMESS-71",
+            "tls": "",
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
+        },
+        "is_encrypted": false,
+        "country_code": "AU",
+        "flag": "🇦🇺",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " AU-VMESS-71"
+    },
+    {
         "input_value": "vmess:\/\/eyJhZGQiOiI4LjIxMC4yMTIuMTk2IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiJmYjlmYzA0My0yYzcwLTQyZWItODhjMC02NjgwNGNhMzMwNjIiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjM0MzQ4LCJwcyI6IiBBVS1WTUVTUy03MiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "AU",
         "type": "vmess",

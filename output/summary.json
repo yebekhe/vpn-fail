@@ -6,28 +6,26 @@
     "by_country": {
         "US": 24,
         "NL": 34,
-        "AU": 13,
+        "AU": 14,
         "FR": 7,
         "CA": 7,
         "XX": 2,
         "BR": 1,
         "DE": 4,
-        "HK": 1,
-        "SG": 1
+        "HK": 1
     },
     "by_type_and_country": {
         "vmess": {
             "US": 24,
             "NL": 34,
-            "AU": 13,
+            "AU": 14,
             "FR": 7,
             "CA": 7,
             "XX": 2,
             "BR": 1,
             "DE": 4,
-            "HK": 1,
-            "SG": 1
+            "HK": 1
         }
     },
-    "generated_at": "2025-10-29T22:13:02+00:00"
+    "generated_at": "2025-10-29T23:12:55+00:00"
 }
