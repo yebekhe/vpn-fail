@@ -82,7 +82,7 @@
         "new_name": " FR-VMESS-23"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDAiLCJhaWQiOjAsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOjQ0MywicHMiOiIgRlItVk1FU1MtNzIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC4xMDAiLCJhaWQiOjAsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOjQ0MywicHMiOiIgRlItVk1FU1MtNzQiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "FR",
         "type": "vmess",
         "parsed": {
@@ -93,7 +93,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": 443,
-            "ps": " FR-VMESS-72",
+            "ps": " FR-VMESS-74",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -105,10 +105,10 @@
         "flag": "🇫🇷",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " FR-VMESS-72"
+        "new_name": " FR-VMESS-74"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC45MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoiIEZSLVZNRVNTLTgwIiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI5MS4xMzQuOC45MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoiIEZSLVZNRVNTLTgyIiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9",
         "country_from_pre": "FR",
         "type": "vmess",
         "parsed": {
@@ -121,7 +121,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": "443",
-            "ps": " FR-VMESS-80",
+            "ps": " FR-VMESS-82",
             "scy": "auto",
             "sni": "yichueng.org",
             "tls": "tls",
@@ -133,10 +133,10 @@
         "flag": "🇫🇷",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " FR-VMESS-80"
+        "new_name": " FR-VMESS-82"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjA5MGQwYmQ5LWY5YzQtNGMzYi04YWFlLWZmYTY3ODc2NTkzNSIsIm5ldCI6IndzIiwicGF0aCI6IlwvIiwicG9ydCI6MjA1MjEsInBzIjoiIEZSLVZNRVNTLTgxIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOjAsImhvc3QiOiIiLCJpZCI6IjA5MGQwYmQ5LWY5YzQtNGMzYi04YWFlLWZmYTY3ODc2NTkzNSIsIm5ldCI6IndzIiwicGF0aCI6IlwvIiwicG9ydCI6MjA1MjEsInBzIjoiIEZSLVZNRVNTLTgzIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "FR",
         "type": "vmess",
         "parsed": {
@@ -147,7 +147,7 @@
             "net": "ws",
             "path": "\/",
             "port": 20521,
-            "ps": " FR-VMESS-81",
+            "ps": " FR-VMESS-83",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -159,6 +159,6 @@
         "flag": "🇫🇷",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " FR-VMESS-81"
+        "new_name": " FR-VMESS-83"
     }
 ]
