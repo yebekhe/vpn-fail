@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ny4yMzkuODEuMTEzIiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI5Nzc5OGFjMi04MGQ0LTRlN2YtODRjYy04MjIxMjQ0ZWQ3NDEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjE3MDAyLCJwcyI6IiBISy1WTUVTUy03IiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0Ny4yMzkuODEuMTEzIiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI5Nzc5OGFjMi04MGQ0LTRlN2YtODRjYy04MjIxMjQ0ZWQ3NDEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjE3MDAyLCJwcyI6IiBISy1WTUVTUy05NCIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
         "country_from_pre": "HK",
         "type": "vmess",
         "parsed": {
@@ -11,7 +11,7 @@
             "net": "ws",
             "path": "\/arki?ed=2048",
             "port": 17002,
-            "ps": " HK-VMESS-7",
+            "ps": " HK-VMESS-94",
             "tls": "",
             "type": "auto",
             "security": "auto",
@@ -23,32 +23,6 @@
         "flag": "🇭🇰",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " HK-VMESS-7"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0Ny4yMzkuODEuMTEzIiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiI5Nzc5OGFjMi04MGQ0LTRlN2YtODRjYy04MjIxMjQ0ZWQ3NDEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2Fya2k_ZWQ9MjA0OCIsInBvcnQiOjE3MDAyLCJwcyI6IiBISy1WTUVTUy05MiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
-        "country_from_pre": "HK",
-        "type": "vmess",
-        "parsed": {
-            "add": "47.239.81.113",
-            "aid": 0,
-            "host": "",
-            "id": "97798ac2-80d4-4e7f-84cc-8221244ed741",
-            "net": "ws",
-            "path": "\/arki?ed=2048",
-            "port": 17002,
-            "ps": " HK-VMESS-92",
-            "tls": "",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
-        },
-        "is_encrypted": false,
-        "country_code": "HK",
-        "flag": "🇭🇰",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " HK-VMESS-92"
+        "new_name": " HK-VMESS-94"
     }
 ]
