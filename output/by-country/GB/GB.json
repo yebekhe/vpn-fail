@@ -1,19 +1,19 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTE3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4Mi4xNTIuNjQuNDAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNWE3NTRhYjEtZjcyZC00ZGMxLWEyZWUtMzEzNjJmOTMxMjAxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxMDk4MiIsInBzIjoiIEdCLVZNRVNTLTQ2Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
-            "add": "lt.fxlcn.com",
+            "add": "82.152.64.40",
             "aid": "0",
             "alpn": "",
             "fp": "",
             "host": "",
-            "id": "469e0b31-30c3-4dab-800d-711232634ce1",
+            "id": "5a754ab1-f72d-4dc1-a2ee-31362f931201",
             "net": "tcp",
             "path": "",
-            "port": "45228",
-            "ps": " GB-VMESS-17",
+            "port": "10982",
+            "ps": " GB-VMESS-46",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -25,34 +25,6 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-17"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTQzIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
-        "country_from_pre": "GB",
-        "type": "vmess",
-        "parsed": {
-            "add": "lt.fxlcn.com",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "",
-            "id": "469e0b31-30c3-4dab-800d-711232634ce1",
-            "net": "tcp",
-            "path": "",
-            "port": "45228",
-            "ps": " GB-VMESS-43",
-            "scy": "auto",
-            "sni": "",
-            "tls": "",
-            "type": "",
-            "v": "2"
-        },
-        "is_encrypted": false,
-        "country_code": "GB",
-        "flag": "🇬🇧",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " GB-VMESS-43"
+        "new_name": " GB-VMESS-46"
     }
 ]
