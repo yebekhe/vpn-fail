@@ -82,7 +82,7 @@
         "new_name": " CA-VMESS-63"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuNTAuMTcyIiwiYWlkIjowLCJob3N0IjoiYmFyYWRpaGEuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTY1IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuNTAuMTcyIiwiYWlkIjowLCJob3N0IjoiYmFyYWRpaGEuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTY2IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
@@ -93,7 +93,7 @@
             "net": "ws",
             "path": "\/linkvws",
             "port": 443,
-            "ps": " CA-VMESS-65",
+            "ps": " CA-VMESS-66",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -105,10 +105,10 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-65"
+        "new_name": " CA-VMESS-66"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTQ3IiwiYWlkIjowLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOjQ0MywicHMiOiIgQ0EtVk1FU1MtNzEiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTQ3IiwiYWlkIjowLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOjQ0MywicHMiOiIgQ0EtVk1FU1MtNzIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
@@ -119,7 +119,7 @@
             "net": "ws",
             "path": "linkvws",
             "port": 443,
-            "ps": " CA-VMESS-71",
+            "ps": " CA-VMESS-72",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -131,6 +131,6 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-71"
+        "new_name": " CA-VMESS-72"
     }
 ]
