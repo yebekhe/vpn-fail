@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTI2Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTMyIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
@@ -13,7 +13,7 @@
             "net": "tcp",
             "path": "",
             "port": "45228",
-            "ps": " GB-VMESS-26",
+            "ps": " GB-VMESS-32",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -25,10 +25,10 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-26"
+        "new_name": " GB-VMESS-32"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTk0Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTQ5Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
@@ -41,7 +41,7 @@
             "net": "tcp",
             "path": "",
             "port": "45228",
-            "ps": " GB-VMESS-94",
+            "ps": " GB-VMESS-49",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -53,6 +53,6 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-94"
+        "new_name": " GB-VMESS-49"
     }
 ]
