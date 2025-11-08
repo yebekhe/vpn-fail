@@ -1,32 +1,90 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTQ3IiwiYWlkIjowLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOjQ0MywicHMiOiIgQ0EtVk1FU1MtMSIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwic2VjdXJpdHkiOiJhdXRvIiwic2tpcC1jZXJ0LXZlcmlmeSI6dHJ1ZSwic25pIjoiIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy0yNyIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
-            "add": "15.235.85.147",
-            "aid": 0,
-            "host": "pelang.org",
+            "add": "15.235.85.156",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "kampong.org",
             "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "net": "ws",
             "path": "linkvws",
-            "port": 443,
-            "ps": " CA-VMESS-1",
+            "port": "443",
+            "ps": " CA-VMESS-27",
+            "scy": "auto",
+            "sni": "kampong.org",
             "tls": "tls",
-            "type": "auto",
-            "security": "auto",
-            "skip-cert-verify": true,
-            "sni": ""
+            "type": "---",
+            "v": "2"
         },
-        "is_encrypted": false,
+        "is_encrypted": true,
         "country_code": "CA",
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-1"
+        "new_name": " CA-VMESS-27"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODMuMjI4IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTI1IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5IjpmYWxzZSwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNDguMTEzLjE3Ni4xOTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy0zMSIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Ii0tLSIsInYiOiIyIn0",
+        "country_from_pre": "CA",
+        "type": "vmess",
+        "parsed": {
+            "add": "148.113.176.192",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "",
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "net": "ws",
+            "path": "linkvws",
+            "port": "443",
+            "ps": " CA-VMESS-31",
+            "scy": "auto",
+            "sni": "fapeng.org",
+            "tls": "tls",
+            "type": "---",
+            "v": "2"
+        },
+        "is_encrypted": true,
+        "country_code": "CA",
+        "flag": "🇨🇦",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " CA-VMESS-31"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNDguMTEzLjE1My4xMDkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6InlpY2h1ZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy0zNCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiLS0tIiwidiI6IjIifQ",
+        "country_from_pre": "CA",
+        "type": "vmess",
+        "parsed": {
+            "add": "148.113.153.109",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "yichueng.org",
+            "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
+            "net": "ws",
+            "path": "linkvws",
+            "port": "443",
+            "ps": " CA-VMESS-34",
+            "scy": "auto",
+            "sni": "yichueng.org",
+            "tls": "tls",
+            "type": "---",
+            "v": "2"
+        },
+        "is_encrypted": true,
+        "country_code": "CA",
+        "flag": "🇨🇦",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " CA-VMESS-34"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODMuMjI4IiwiYWlkIjowLCJob3N0IjoiIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTU0IiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5IjpmYWxzZSwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyJ9",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
@@ -37,7 +95,7 @@
             "net": "ws",
             "path": "\/linkvws",
             "port": 443,
-            "ps": " CA-VMESS-25",
+            "ps": " CA-VMESS-54",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -49,10 +107,10 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-25"
+        "new_name": " CA-VMESS-54"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuNTAuMTcyIiwiYWlkIjowLCJob3N0IjoiYmFyYWRpaGEuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTMxIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuNTAuMTcyIiwiYWlkIjowLCJob3N0IjoiYmFyYWRpaGEuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJcL2xpbmt2d3MiLCJwb3J0Ijo0NDMsInBzIjoiIENBLVZNRVNTLTcwIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJzZWN1cml0eSI6ImF1dG8iLCJza2lwLWNlcnQtdmVyaWZ5Ijp0cnVlLCJzbmkiOiIifQ",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
@@ -63,7 +121,7 @@
             "net": "ws",
             "path": "\/linkvws",
             "port": 443,
-            "ps": " CA-VMESS-31",
+            "ps": " CA-VMESS-70",
             "tls": "tls",
             "type": "auto",
             "security": "auto",
@@ -75,15 +133,15 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-31"
+        "new_name": " CA-VMESS-70"
     },
     {
-        "input_value": "vmess:\/\/eyJ2IjoiMiIsInBzIjoiIENBLVZNRVNTLTQwIiwiYWRkIjoiMTUuMjM1LjgzLjIyNyIsInBvcnQiOjQ0MywiYWlkIjowLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsInRscyI6InRscyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsImhvc3QiOiJtYW5rYWRtdS5jb20iLCJwYXRoIjoiXC9saW5rdndzIn0",
+        "input_value": "vmess:\/\/eyJ2IjoiMiIsInBzIjoiIENBLVZNRVNTLTcxIiwiYWRkIjoiMTUuMjM1LjgzLjIyNyIsInBvcnQiOjQ0MywiYWlkIjowLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsInRscyI6InRscyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsImhvc3QiOiJtYW5rYWRtdS5jb20iLCJwYXRoIjoiXC9saW5rdndzIn0",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
             "v": "2",
-            "ps": " CA-VMESS-40",
+            "ps": " CA-VMESS-71",
             "add": "15.235.83.227",
             "port": 443,
             "aid": 0,
@@ -101,34 +159,32 @@
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-40"
+        "new_name": " CA-VMESS-71"
     },
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IiBDQS1WTUVTUy02OCIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiItLS0iLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiIxNS4yMzUuODUuMTQ3IiwiYWlkIjowLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOjQ0MywicHMiOiIgQ0EtVk1FU1MtODkiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
         "country_from_pre": "CA",
         "type": "vmess",
         "parsed": {
-            "add": "15.235.85.156",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "kampong.org",
+            "add": "15.235.85.147",
+            "aid": 0,
+            "host": "pelang.org",
             "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
             "net": "ws",
             "path": "linkvws",
-            "port": "443",
-            "ps": " CA-VMESS-68",
-            "scy": "auto",
-            "sni": "kampong.org",
+            "port": 443,
+            "ps": " CA-VMESS-89",
             "tls": "tls",
-            "type": "---",
-            "v": "2"
+            "type": "auto",
+            "security": "auto",
+            "skip-cert-verify": true,
+            "sni": ""
         },
-        "is_encrypted": true,
+        "is_encrypted": false,
         "country_code": "CA",
         "flag": "🇨🇦",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CA-VMESS-68"
+        "new_name": " CA-VMESS-89"
     }
 ]
