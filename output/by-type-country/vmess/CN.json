@@ -1,11 +1,11 @@
 [
     {
-        "input_value": "vmess:\/\/eyJ2IjoiMiIsInBzIjoiIENOLVZNRVNTLTM0IiwiYWRkIjoidjEyLmhlZHVpYW4ubGluayIsInBvcnQiOiIzMDgxMiIsImFpZCI6Miwic2N5IjoiYXV0byIsIm5ldCI6IndzIiwidHlwZSI6Im5vbmUiLCJ0bHMiOiIiLCJpZCI6ImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsInNuaSI6IiIsImhvc3QiOiJvY2JjLmNvbSIsInBhdGgiOiJcL29vb28ifQ",
+        "input_value": "vmess:\/\/eyJ2IjoiMiIsInBzIjoiIENOLVZNRVNTLTciLCJhZGQiOiJ2MTIuaGVkdWlhbi5saW5rIiwicG9ydCI6IjMwODEyIiwiYWlkIjoyLCJzY3kiOiJhdXRvIiwibmV0Ijoid3MiLCJ0eXBlIjoibm9uZSIsInRscyI6IiIsImlkIjoiY2JiM2Y4NzctZDFmYi0zNDRjLTg3YTktZDE1M2JmZmQ1NDg0Iiwic25pIjoiIiwiaG9zdCI6Im9jYmMuY29tIiwicGF0aCI6Ilwvb29vbyJ9",
         "country_from_pre": "CN",
         "type": "vmess",
         "parsed": {
             "v": "2",
-            "ps": " CN-VMESS-34",
+            "ps": " CN-VMESS-7",
             "add": "v12.heduian.link",
             "port": "30812",
             "aid": 2,
@@ -23,6 +23,6 @@
         "flag": "🇨🇳",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " CN-VMESS-34"
+        "new_name": " CN-VMESS-7"
     }
 ]
