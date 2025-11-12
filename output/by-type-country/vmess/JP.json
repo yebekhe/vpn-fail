@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiI0My4xNjIuMTE0LjEzNyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI2YTRjZTViOS0wZDYwLTRhMjEtYThmZS04OTc3OTgwMTk1MDAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjU5Njc0IiwicHMiOiIgSlAtVk1FU1MtNTYiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiI0My4xNjIuMTE0LjEzNyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiIiwiaWQiOiI2YTRjZTViOS0wZDYwLTRhMjEtYThmZS04OTc3OTgwMTk1MDAiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjU5Njc0IiwicHMiOiIgSlAtVk1FU1MtOSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0",
         "country_from_pre": "JP",
         "type": "vmess",
         "parsed": {
@@ -13,7 +13,7 @@
             "net": "tcp",
             "path": "",
             "port": "59674",
-            "ps": " JP-VMESS-56",
+            "ps": " JP-VMESS-9",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -25,6 +25,6 @@
         "flag": "🇯🇵",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " JP-VMESS-56"
+        "new_name": " JP-VMESS-9"
     }
 ]
