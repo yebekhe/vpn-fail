@@ -1,0 +1,25 @@
+[
+    {
+        "input_value": "vmess:\/\/eyJ2IjoiMiIsInBzIjoiIEJELVZNRVNTLTczIiwiYWRkIjoiMTc1LjI5LjIyLjEwMSIsInBvcnQiOjI4MDE2LCJhaWQiOjAsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoibm9uZSIsInRscyI6IiIsImlkIjoiZDI1NDAzMjUtOWFkNi0zM2Q3LWJlODYtMjU5YjViYmE0ZWY4In0",
+        "country_from_pre": "BD",
+        "type": "vmess",
+        "parsed": {
+            "v": "2",
+            "ps": " BD-VMESS-73",
+            "add": "175.29.22.101",
+            "port": 28016,
+            "aid": 0,
+            "scy": "auto",
+            "net": "tcp",
+            "type": "none",
+            "tls": "",
+            "id": "d2540325-9ad6-33d7-be86-259b5bba4ef8"
+        },
+        "is_encrypted": false,
+        "country_code": "BD",
+        "flag": "🇧🇩",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " BD-VMESS-73"
+    }
+]
