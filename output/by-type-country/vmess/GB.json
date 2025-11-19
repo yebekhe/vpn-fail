@@ -1,6 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTk4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
+        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTY1Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
@@ -13,7 +13,7 @@
             "net": "tcp",
             "path": "",
             "port": "45228",
-            "ps": " GB-VMESS-98",
+            "ps": " GB-VMESS-65",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -25,6 +25,6 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-98"
+        "new_name": " GB-VMESS-65"
     }
 ]
