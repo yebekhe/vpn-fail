@@ -3112,38 +3112,5 @@
             "valid": true,
             "new_name": " US-VMESS-92"
         }
-    },
-    {
-        "first_href": "https:\/\/vpn.fail\/free-proxy\/ip\/47.243.168.211",
-        "country_text": "United States",
-        "time_value": 1763723258,
-        "input_value": "vmess:\/\/ewogICAgImFkZCI6ICI0Ny4yNDMuMTY4LjIxMSIsCiAgICAiYWlkIjogMCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiMzNjYjk3MzctODhhNS00MzcyLTlkYjAtODQyNTVlMjQzYzFkIiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiL2Fya2k\/ZWQ9MjA0OCIsCiAgICAicG9ydCI6IDI0NjgwLAogICAgInBzIjogIvCfh63wn4ewSEstNDcuMjQzLjE2OC4yMTEtNTYzOCIsCiAgICAidGxzIjogIiIsCiAgICAidHlwZSI6ICJhdXRvIiwKICAgICJzZWN1cml0eSI6ICJhdXRvIiwKICAgICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwKICAgICJzbmkiOiAiIgp9",
-        "country_from_pre": "US",
-        "enriched_data": {
-            "input_value": "vmess:\/\/eyJhZGQiOiI0Ny4yNDMuMTY4LjIxMSIsImFpZCI6MCwiaG9zdCI6IiIsImlkIjoiMzNjYjk3MzctODhhNS00MzcyLTlkYjAtODQyNTVlMjQzYzFkIiwibmV0Ijoid3MiLCJwYXRoIjoiXC9hcmtpP2VkPTIwNDgiLCJwb3J0IjoyNDY4MCwicHMiOiIgVVMtVk1FU1MtOTMiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInNlY3VyaXR5IjoiYXV0byIsInNraXAtY2VydC12ZXJpZnkiOnRydWUsInNuaSI6IiJ9",
-            "country_from_pre": "US",
-            "type": "vmess",
-            "parsed": {
-                "add": "47.243.168.211",
-                "aid": 0,
-                "host": "",
-                "id": "33cb9737-88a5-4372-9db0-84255e243c1d",
-                "net": "ws",
-                "path": "\/arki?ed=2048",
-                "port": 24680,
-                "ps": " US-VMESS-93",
-                "tls": "",
-                "type": "auto",
-                "security": "auto",
-                "skip-cert-verify": true,
-                "sni": ""
-            },
-            "is_encrypted": false,
-            "country_code": "US",
-            "flag": "🇺🇸",
-            "is_cloudflare": false,
-            "valid": true,
-            "new_name": " US-VMESS-93"
-        }
     }
 ]
