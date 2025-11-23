@@ -1,34 +1,6 @@
 [
     {
-        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTUwIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
-        "country_from_pre": "GB",
-        "type": "vmess",
-        "parsed": {
-            "add": "lt.fxlcn.com",
-            "aid": "0",
-            "alpn": "",
-            "fp": "",
-            "host": "",
-            "id": "469e0b31-30c3-4dab-800d-711232634ce1",
-            "net": "tcp",
-            "path": "",
-            "port": "45228",
-            "ps": " GB-VMESS-50",
-            "scy": "auto",
-            "sni": "",
-            "tls": "",
-            "type": "",
-            "v": "2"
-        },
-        "is_encrypted": false,
-        "country_code": "GB",
-        "flag": "🇬🇧",
-        "is_cloudflare": false,
-        "valid": true,
-        "new_name": " GB-VMESS-50"
-    },
-    {
-        "input_value": "vmess:\/\/eyJhZGQiOiI4Mi4xOTguMjQ2Ljk3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTgwIiwicHMiOiIgR0ItVk1FU1MtNzkiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0",
+        "input_value": "vmess:\/\/eyJhZGQiOiI4Mi4xOTguMjQ2Ljk3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImQxM2ZjMmY1LTNlMDUtNDc5NS04MWViLTQ0MTQzYTA5ZTU1MiIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTgwIiwicHMiOiIgR0ItVk1FU1MtMjQiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0",
         "country_from_pre": "GB",
         "type": "vmess",
         "parsed": {
@@ -41,7 +13,7 @@
             "net": "tcp",
             "path": "",
             "port": "180",
-            "ps": " GB-VMESS-79",
+            "ps": " GB-VMESS-24",
             "scy": "auto",
             "sni": "",
             "tls": "",
@@ -53,6 +25,34 @@
         "flag": "🇬🇧",
         "is_cloudflare": false,
         "valid": true,
-        "new_name": " GB-VMESS-79"
+        "new_name": " GB-VMESS-24"
+    },
+    {
+        "input_value": "vmess:\/\/eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiNDY5ZTBiMzEtMzBjMy00ZGFiLTgwMGQtNzExMjMyNjM0Y2UxIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0NTIyOCIsInBzIjoiIEdCLVZNRVNTLTc3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9",
+        "country_from_pre": "GB",
+        "type": "vmess",
+        "parsed": {
+            "add": "lt.fxlcn.com",
+            "aid": "0",
+            "alpn": "",
+            "fp": "",
+            "host": "",
+            "id": "469e0b31-30c3-4dab-800d-711232634ce1",
+            "net": "tcp",
+            "path": "",
+            "port": "45228",
+            "ps": " GB-VMESS-77",
+            "scy": "auto",
+            "sni": "",
+            "tls": "",
+            "type": "",
+            "v": "2"
+        },
+        "is_encrypted": false,
+        "country_code": "GB",
+        "flag": "🇬🇧",
+        "is_cloudflare": false,
+        "valid": true,
+        "new_name": " GB-VMESS-77"
     }
 ]
